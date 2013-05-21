@@ -13,19 +13,35 @@ class User
     /** @var \SimpleXMLElement */
     private $_xml;
 
+    private $_last_error;
 
     public function __construct(AlmaSoapClient $soap_client)
     {
         $this->_soap_client = $soap_client;
     }
 
+    /**
+     * @param $identifier
+     *
+     * @return bool FALSE on error
+     */
     public function load($identifier)
     {
         $params = array('arg0' => $identifier);
         $result = $this->_soap_client->execute('getUserDetails', $params);
         $base = new \SimpleXMLElement($result->SearchResults);
+
+        if ((string) $base->errorsExist === 'true')
+        {
+            $this->_last_error = new \stdClass();
+            $this->_last_error->code = (string) $base->errorList->error->errorCode;
+            $this->_last_error->message = (string) $base->errorList->error->errorMessage;
+            return false;
+        }
+
         $children = $base->result->children('http://com/exlibris/urm/user_record/xmlbeans');
         $this->_xml = $children[0];
+        return true;
     }
 
     public function firstName()
@@ -118,5 +134,10 @@ class User
         }
 
         return $return_blocks;
+    }
+
+    public function lastError()
+    {
+        return $this->_last_error;
     }
 }

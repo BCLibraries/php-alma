@@ -35,27 +35,33 @@ $client = new \BCLib\Alma\AlmaSoapClient($soap_user, $soap_institution, $soap_pa
 
 // Then create and load the user.
 $user = new \BCLib\Alma\User($client);
-$user->load('88779385');
 
-echo $user->lastName() . ", " . $user->firstName() . $user->middleName() . "\n";
-echo $user->email() . "\n";
-echo $user->groupName($user_groups) . " ";
-echo $user->groupCode() . "\n";
-
-if ($user->isActive())
+if ($user->load('88779385'))
 {
-    echo "User is active.\n";
+    echo $user->lastName() . ", " . $user->firstName() . $user->middleName() . "\n";
+    echo $user->email() . "\n";
+    echo $user->groupName($user_groups) . " ";
+    echo $user->groupCode() . "\n";
+
+    if ($user->isActive())
+    {
+        echo "User is active.\n";
+    }
+
+    echo "Identifiers\n";
+    foreach ($user->identifiers($id_types) as $id)
+    {
+        echo "\t" . $id->value . " " . $id->name . " " . $id->code . "\n";
+    }
+
+    echo "Blocks\n";
+    foreach ($user->blocks() as $block)
+    {
+        echo "\t" . $block->code . " " . $block->type . " " . $block->status . " ";
+        echo $block->creation_date . " " . $block->modification_date . "\n";
+    }
 }
-
-echo "Identifiers\n";
-foreach ($user->identifiers($id_types) as $id)
+else
 {
-    echo "\t" . $id->value . " " . $id->name . " " . $id->code . "\n";
-}
-
-echo "Blocks\n";
-foreach ($user->blocks() as $block)
-{
-    echo "\t" . $block->code . " " . $block->type . " " . $block->status . " ";
-    echo $block->creation_date . " " . $block->modification_date . "\n";
+    echo $user->lastError()->message . "\n";
 }

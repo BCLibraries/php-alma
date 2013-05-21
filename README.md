@@ -17,8 +17,14 @@ To load a user:
 
 ```php
 $user = new \BCLib\Alma\User($client);
-$user->load('88779385');
-echo $user->lastName() . ", " . $user->firstName() . $user->middleName() . "\n";
+if ($user->load('88779385'))
+{
+    echo $user->lastName() . ", " . $user->firstName() . $user->middleName() . "\n";
+}
+else
+{
+    echo $user->lastError()->message . "\n";
+}
 ```
 
 See *user-demo.php* for a full example.
