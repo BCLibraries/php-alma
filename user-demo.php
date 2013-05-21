@@ -8,6 +8,8 @@ $soap_institution = ''; // e.g. '01BC_INST'
 $soap_pass = '';
 $wsdl = __DIR__ . '/UserWebServices.xml';
 
+$user_id = ''; // User ID used by Alma.
+
 // Optional map of user group codes to names.
 $user_groups = array(
     '01' => 'BC Undergraduate',
@@ -36,7 +38,7 @@ $client = new \BCLib\Alma\AlmaSoapClient($soap_user, $soap_institution, $soap_pa
 // Then create and load the user.
 $user = new \BCLib\Alma\User($client);
 
-if ($user->load('88779385'))
+if ($user->load($user_id))
 {
     echo $user->lastName() . ", " . $user->firstName() . $user->middleName() . "\n";
     echo $user->email() . "\n";
