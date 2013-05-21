@@ -1,0 +1,215 @@
+<?xml version="1.0" ?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+                  xmlns:tns="http://alma.exlibris.com/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+                  name="UserWebServices"
+                  targetNamespace="http://alma.exlibris.com/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:tns="http://alma.exlibris.com/"
+                   elementFormDefault="unqualified"
+                   targetNamespace="http://alma.exlibris.com/" version="1.0">
+            <xs:element name="createUser" type="tns:createUser"></xs:element>
+            <xs:element name="createUserResponse"
+                        type="tns:createUserResponse"></xs:element>
+            <xs:element name="deleteUser" type="tns:deleteUser"></xs:element>
+            <xs:element name="deleteUserResponse"
+                        type="tns:deleteUserResponse"></xs:element>
+            <xs:element name="getUserDetails"
+                        type="tns:getUserDetails"></xs:element>
+            <xs:element name="getUserDetailsResponse"
+                        type="tns:getUserDetailsResponse"></xs:element>
+            <xs:element name="updateUser" type="tns:updateUser"></xs:element>
+            <xs:element name="updateUserResponse"
+                        type="tns:updateUserResponse"></xs:element>
+            <xs:complexType name="updateUser">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0"
+                                type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="arg1"
+                                type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="arg2"
+                                type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="arg3"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="updateUserResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="SearchResults"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="createUser">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0"
+                                type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="arg1"
+                                type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="arg2"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="createUserResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="SearchResults"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="deleteUser">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0"
+                                type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="arg1"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="deleteUserResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="SearchResults"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="getUserDetails">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0"
+                                type="xs:string"></xs:element>
+                    <xs:element minOccurs="0" name="arg1"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="getUserDetailsResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="SearchResults"
+                                type="xs:string"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="updateUser">
+        <wsdl:part element="tns:updateUser" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="deleteUser">
+        <wsdl:part element="tns:deleteUser" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getUserDetailsResponse">
+        <wsdl:part element="tns:getUserDetailsResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="createUserResponse">
+        <wsdl:part element="tns:createUserResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getUserDetails">
+        <wsdl:part element="tns:getUserDetails" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="createUser">
+        <wsdl:part element="tns:createUser" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="deleteUserResponse">
+        <wsdl:part element="tns:deleteUserResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="updateUserResponse">
+        <wsdl:part element="tns:updateUserResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="UserWebServices">
+        <wsdl:operation name="updateUser">
+            <wsdl:input message="tns:updateUser" name="updateUser"
+                        wsam:Action="updateUser" wsaw:Action="updateUser">
+            </wsdl:input>
+            <wsdl:output message="tns:updateUserResponse"
+                         name="updateUserResponse"
+                         wsam:Action="http://alma.exlibris.com/UserWebServices/updateUserResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUser">
+            <wsdl:input message="tns:createUser" name="createUser"
+                        wsam:Action="createUser" wsaw:Action="createUser">
+            </wsdl:input>
+            <wsdl:output message="tns:createUserResponse"
+                         name="createUserResponse"
+                         wsam:Action="http://alma.exlibris.com/UserWebServices/createUserResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteUser">
+            <wsdl:input message="tns:deleteUser" name="deleteUser"
+                        wsam:Action="deleteUser" wsaw:Action="deleteUser">
+            </wsdl:input>
+            <wsdl:output message="tns:deleteUserResponse"
+                         name="deleteUserResponse"
+                         wsam:Action="http://alma.exlibris.com/UserWebServices/deleteUserResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserDetails">
+            <wsdl:input message="tns:getUserDetails" name="getUserDetails"
+                        wsam:Action="getUserDetails"
+                        wsaw:Action="getUserDetails">
+            </wsdl:input>
+            <wsdl:output message="tns:getUserDetailsResponse"
+                         name="getUserDetailsResponse"
+                         wsam:Action="http://alma.exlibris.com/UserWebServices/getUserDetailsResponse">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="UserWebServicesSoapBinding" type="tns:UserWebServices">
+        <soap:binding style="document"
+                      transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+        <wsdl:operation name="createUser">
+            <soap:operation soapAction="createUser"
+                            style="document"></soap:operation>
+            <wsdl:input name="createUser">
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output name="createUserResponse">
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updateUser">
+            <soap:operation soapAction="updateUser"
+                            style="document"></soap:operation>
+            <wsdl:input name="updateUser">
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output name="updateUserResponse">
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteUser">
+            <soap:operation soapAction="deleteUser"
+                            style="document"></soap:operation>
+            <wsdl:input name="deleteUser">
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output name="deleteUserResponse">
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserDetails">
+            <soap:operation soapAction="getUserDetails"
+                            style="document"></soap:operation>
+            <wsdl:input name="getUserDetails">
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output name="getUserDetailsResponse">
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="UserWebServices">
+        <wsdl:port binding="tns:UserWebServicesSoapBinding"
+                   name="UserWebServicesPort">
+            <soap:address
+                    location="http://alma.exlibrisgroup.com/almaws/repository/UserWebServices"></soap:address>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

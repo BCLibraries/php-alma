@@ -1,0 +1,1233 @@
+<web_service_result xmlns="http://com/exlibris/urm/general/xmlbeans"
+                    xmlns:xb="http://com/exlibris/urm/user_record/xmlbeans"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <errorsExist>false</errorsExist>
+    <result>
+        <xb:userRecord>
+            <xb:owneredEntity>
+                <xb:createdBy>patronLoader</xb:createdBy>
+                <xb:creationDate>20130419040000</xb:creationDate>
+                <xb:modifiedBy>patronLoader</xb:modifiedBy>
+                <xb:modificationDate>20130521040000</xb:modificationDate>
+            </xb:owneredEntity>
+            <xb:userDetails>
+                <xb:birthDate/>
+                <xb:defaultLanguage>en</xb:defaultLanguage>
+                <xb:expiryDate>20131023040000</xb:expiryDate>
+                <xb:externalId>SIS</xb:externalId>
+                <xb:firstName>Benjamin</xb:firstName>
+                <xb:jobDescription xsi:nil="true"/>
+                <xb:jobTitle xsi:nil="true"/>
+                <xb:lastName>Fakeperson</xb:lastName>
+                <xb:middleName xsi:nil="true"/>
+                <xb:campusCode xsi:nil="true"/>
+                <xb:purgeDate>20131023040000</xb:purgeDate>
+                <xb:recordType>Public</xb:recordType>
+                <xb:status>Active</xb:status>
+                <xb:userGroup>08</xb:userGroup>
+                <xb:userName>FAKEPERS</xb:userName>
+                <xb:userType>External</xb:userType>
+                <xb:webSiteUrl xsi:nil="true"/>
+            </xb:userDetails>
+            <xb:userNoteList>
+                <xb:userNote>
+                    <xb:owneredEntity>
+                        <xb:createdBy>EX_LIBRIS</xb:createdBy>
+                        <xb:modifiedBy xsi:nil="true"/>
+                    </xb:owneredEntity>
+                    <xb:note>Bor Status: BC Staff</xb:note>
+                    <xb:type>Library</xb:type>
+                    <xb:userViewable>false</xb:userViewable>
+                </xb:userNote>
+            </xb:userNoteList>
+            <xb:userBlockList>
+                <xb:userBlock>
+                    <xb:owneredEntity>
+                        <xb:createdBy>Fakeperson, Benjamin</xb:createdBy>
+                        <xb:creationDate>20130521194301</xb:creationDate>
+                        <xb:modifiedBy>Fakeperson, Benjamin</xb:modifiedBy>
+                        <xb:modificationDate>20130521194319
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:type>General</xb:type>
+                    <xb:blockDefinitionId>TECH</xb:blockDefinitionId>
+                    <xb:status>Active</xb:status>
+                    <xb:note>Test block--I didn't really not return any
+                        technology.
+                    </xb:note>
+                </xb:userBlock>
+            </xb:userBlockList>
+            <xb:userIdentifiers>
+                <xb:userIdentifier>
+                    <xb:owneredEntity>
+                        <xb:createdBy>patronLoader</xb:createdBy>
+                        <xb:creationDate>20130521040000</xb:creationDate>
+                        <xb:modifiedBy>patronLoader</xb:modifiedBy>
+                        <xb:modificationDate>20130521040000
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:type>01</xb:type>
+                    <xb:value>12345678</xb:value>
+                </xb:userIdentifier>
+                <xb:userIdentifier>
+                    <xb:owneredEntity>
+                        <xb:createdBy>patronLoader</xb:createdBy>
+                        <xb:creationDate>20130521040000</xb:creationDate>
+                        <xb:modifiedBy>patronLoader</xb:modifiedBy>
+                        <xb:modificationDate>20130521040000
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:type>05</xb:type>
+                    <xb:value>52587527</xb:value>
+                </xb:userIdentifier>
+            </xb:userIdentifiers>
+            <xb:userAddressList>
+                <xb:userAddress preferred="false">
+                    <xb:line1>123 Nowhere Lane</xb:line1>
+                    <xb:line2>Apartment 2</xb:line2>
+                    <xb:line3 xsi:nil="true"/>
+                    <xb:line4 xsi:nil="true"/>
+                    <xb:line5 xsi:nil="true"/>
+                    <xb:country xsi:nil="true"/>
+                    <xb:city>Boston</xb:city>
+                    <xb:postalCode>02446</xb:postalCode>
+                    <xb:note xsi:nil="true"/>
+                    <xb:startDate>20110118050000</xb:startDate>
+                    <xb:endDate>20500101050000</xb:endDate>
+                    <xb:stateProvince>MA</xb:stateProvince>
+                    <xb:types>
+                        <xb:userAddressTypes>home</xb:userAddressTypes>
+                    </xb:types>
+                </xb:userAddress>
+                <xb:userAddress preferred="true">
+                    <xb:line1>GENRL O'neill Library</xb:line1>
+                    <xb:line2>140 Commonwealth Ave</xb:line2>
+                    <xb:line3 xsi:nil="true"/>
+                    <xb:line4 xsi:nil="true"/>
+                    <xb:line5 xsi:nil="true"/>
+                    <xb:country xsi:nil="true"/>
+                    <xb:city>Chestnut Hill</xb:city>
+                    <xb:postalCode>02467</xb:postalCode>
+                    <xb:note xsi:nil="true"/>
+                    <xb:startDate>20110118050000</xb:startDate>
+                    <xb:endDate>20500101050000</xb:endDate>
+                    <xb:stateProvince>MA</xb:stateProvince>
+                    <xb:types>
+                        <xb:userAddressTypes>work</xb:userAddressTypes>
+                    </xb:types>
+                </xb:userAddress>
+                <xb:userEmail preferred="true">
+                    <xb:description xsi:nil="true"/>
+                    <xb:email>FAKEPERS@BC.EDU</xb:email>
+                    <xb:types>
+                        <xb:userEmailTypes>personal</xb:userEmailTypes>
+                    </xb:types>
+                </xb:userEmail>
+                <xb:userEmail preferred="false">
+                    <xb:description xsi:nil="true"/>
+                    <xb:email>FAKEPERS@BC.EDU</xb:email>
+                    <xb:types>
+                        <xb:userEmailTypes>work</xb:userEmailTypes>
+                    </xb:types>
+                </xb:userEmail>
+                <xb:userPhone preferred="true" preferredSMS="false">
+                    <xb:phone>6175555555</xb:phone>
+                    <xb:types>
+                        <xb:userPhoneTypes>home</xb:userPhoneTypes>
+                    </xb:types>
+                </xb:userPhone>
+                <xb:userPhone preferred="false" preferredSMS="false">
+                    <xb:phone>6175555555</xb:phone>
+                    <xb:types>
+                        <xb:userPhoneTypes>office</xb:userPhoneTypes>
+                    </xb:types>
+                </xb:userPhone>
+            </xb:userAddressList>
+            <xb:userRoleList>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>EX_LIBRIS</xb:createdBy>
+                        <xb:creationDate>20110119120000</xb:creationDate>
+                        <xb:modifiedBy xsi:nil="true"/>
+                        <xb:modificationDate>20120627120000
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>200</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>210</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>225</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>53</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>29</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>57</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204335</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204335
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>12</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>234</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204335</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204335
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>226</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204335</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204335
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>224</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204335</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204335
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>210</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195804</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195804
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>222</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195804</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195804
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>223</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195804</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195804
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>26</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195804</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195804
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>220</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>29</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>53</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>210</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>209</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>12</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>51</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>38</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>215</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>230</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>231</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20120718162630
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.31591540001021</xb:scope>
+                    <xb:roleType>32</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20120718162550
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.31589510001021</xb:scope>
+                    <xb:roleType>221</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>33</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>218</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>216</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195802</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195802
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>217</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195802</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195802
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>46</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195802</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195802
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>37</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195802</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195802
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>54</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195802</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195802
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>55</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195802</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195802
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>47</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195802</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195802
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>45</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.31589510001021</xb:scope>
+                    <xb:roleType>51</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.31589510001021</xb:scope>
+                    <xb:roleType>32</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.31590280001021</xb:scope>
+                    <xb:roleType>51</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.12900830001021</xb:scope>
+                    <xb:roleType>51</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>215</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.12900830001021</xb:scope>
+                    <xb:roleType>32</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>21</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>214</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>38</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>29</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>204</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>210</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>209</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>205</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>53</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>52</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>50</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>36</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>56</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>55</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>54</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>43</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>44</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>34</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>33</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195742</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195742
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>41</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195803</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195803
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>214</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195743</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195743
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021.31590280001021</xb:scope>
+                    <xb:roleType>32</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>kiddk_internal</xb:createdBy>
+                        <xb:creationDate>20120501195741</xb:creationDate>
+                        <xb:modifiedBy>Ex Libris</xb:modifiedBy>
+                        <xb:modificationDate>20120501195741
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>37</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204047</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204047
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope xsi:nil="true"/>
+                    <xb:roleType>12</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>226</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204048</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204048
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>224</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204335</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204335
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>225</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204335</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204335
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>53</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130220155457</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130220155457
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>372</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130220155457</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130220155457
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>236</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130220155457</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130220155457
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>232</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>KIDDK</xb:createdBy>
+                        <xb:creationDate>20130228204335</xb:creationDate>
+                        <xb:modifiedBy>KIDDK</xb:modifiedBy>
+                        <xb:modificationDate>20130228204335
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Inactive</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>29</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>FAKEPERS</xb:createdBy>
+                        <xb:creationDate>20130107221518</xb:creationDate>
+                        <xb:modifiedBy>FAKEPERS</xb:modifiedBy>
+                        <xb:modificationDate>20130107221518
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>235</xb:roleType>
+                </xb:userRole>
+                <xb:userRole>
+                    <xb:owneredEntity>
+                        <xb:createdBy>FAKEPERS</xb:createdBy>
+                        <xb:creationDate>20130107221519</xb:creationDate>
+                        <xb:modifiedBy>FAKEPERS</xb:modifiedBy>
+                        <xb:modificationDate>20130107221519
+                        </xb:modificationDate>
+                    </xb:owneredEntity>
+                    <xb:details xsi:nil="true"/>
+                    <xb:note xsi:nil="true"/>
+                    <xb:status>Active</xb:status>
+                    <xb:scope>1010.1021</xb:scope>
+                    <xb:roleType>233</xb:roleType>
+                </xb:userRole>
+            </xb:userRoleList>
+            <xb:userStatisticalCategoriesList/>
+        </xb:userRecord>
+    </result>
+</web_service_result>
