@@ -31,8 +31,7 @@ class User
         $result = $this->_soap_client->execute('getUserDetails', $params);
         $base = new \SimpleXMLElement($result->SearchResults);
 
-        if ((string) $base->errorsExist === 'true')
-        {
+        if ((string) $base->errorsExist === 'true') {
             $this->_last_error = new \stdClass();
             $this->_last_error->code = (string) $base->errorList->error->errorCode;
             $this->_last_error->message = (string) $base->errorList->error->errorMessage;
@@ -61,10 +60,9 @@ class User
 
     public function email()
     {
-        foreach ($this->_xml->userAddressList->userEmail as $email_xml)
-        {
-            if ($email_xml->attributes()['preferred'] == 'true')
-            {
+        foreach ($this->_xml->userAddressList->userEmail as $email_xml) {
+            $attributes_array = $email_xml->attributes();
+            if ($attributes_array['preferred'] == 'true') {
                 return (string) $email_xml->email[0];
             }
         }
@@ -97,14 +95,12 @@ class User
         $return_ids = array();
 
         $identifiers_xml = $this->_xml->userIdentifiers->userIdentifier;
-        foreach ($identifiers_xml as $identifier_xml)
-        {
+        foreach ($identifiers_xml as $identifier_xml) {
             $id = new Identifier();
             $id->value = (string) $identifier_xml->value;
             $id->code = (string) $identifier_xml->type;
             $id->name = '';
-            if (isset($id_type_map[$id->code]))
-            {
+            if (isset($id_type_map[$id->code])) {
                 $id->name = $id_type_map[$id->code];
             }
             $return_ids[] = $id;
@@ -121,8 +117,7 @@ class User
         $return_blocks = array();
 
         $blocks_xml = $this->_xml->userBlockList->userBlock;
-        foreach ($blocks_xml as $block_xml)
-        {
+        foreach ($blocks_xml as $block_xml) {
             $block = new Block();
             $block->code = (string) $block_xml->blockDefinitionId;
             $block->type = (string) $block_xml->type;
