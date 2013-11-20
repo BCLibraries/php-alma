@@ -9,29 +9,27 @@ class AlmaServices
     protected static $_wsdl_directory;
     protected static $_institution;
 
-    public static function initialize($username, $password, $institution, $wsdl_directory = null)
+    public static function initialize($username, $password, $institution)
     {
         AlmaServices::$_username = $username;
         AlmaServices::$_password = $password;
         AlmaServices::$_institution = $institution;
-        if (is_null($wsdl_directory)) {
-            AlmaServices::$_wsdl_directory = __DIR__ . '/../../../wsdl';
-        } else {
-            AlmaServices::$_wsdl_directory = $wsdl_directory;
-        }
+        AlmaServices::$_wsdl_directory = __DIR__ . '/../../../wsdl';
     }
 
     public static function userInfoServices($wsdl = null)
     {
-        if (is_null($wsdl)) {
-            $wsdl = AlmaServices::$_wsdl_directory . "/UserWebServices.xml";
-        }
+        $wsdl = is_null($wsdl) ? AlmaServices::$_wsdl_directory . '/UserWebServices.xml' : $wsdl;
+        $client = AlmaServices::_getSoapClient($wsdl);
+        return new UserInfoServices($client, new User());
+    }
 
-        $client = new AlmaSoapClient(
+    protected static function _getSoapClient($wsdl)
+    {
+        return new AlmaSoapClient(
             AlmaServices::$_username,
             AlmaServices::$_password,
             AlmaServices::$_institution,
             $wsdl);
-        return new UserInfoServices($client, new User());
     }
 }
