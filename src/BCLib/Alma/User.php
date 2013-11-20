@@ -29,17 +29,10 @@ class User
     {
         $params = array('arg0' => $identifier);
         $base = $this->_soap_client->execute('getUserDetails', $params);
-
-        if ((string) $base->errorsExist === 'true') {
-            $this->_last_error = new \stdClass();
-            $this->_last_error->code = (string) $base->errorList->error->errorCode;
-            $this->_last_error->message = (string) $base->errorList->error->errorMessage;
-            return false;
+        if ($this->_soap_client->lastError() === false) {
+            $children = $base->result->children('http://com/exlibris/urm/user_record/xmlbeans');
+            $this->_xml = $children[0];
         }
-
-        $children = $base->result->children('http://com/exlibris/urm/user_record/xmlbeans');
-        $this->_xml = $children[0];
-        return true;
     }
 
     public function firstName()

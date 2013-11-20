@@ -9,6 +9,8 @@ class AlmaSoapClient
     private $_wsdl;
     private $_client;
 
+    private $_last_error = false;
+
     public function __construct($user, $instution, $password, $wsdl)
     {
         $this->_user = 'AlmaSDK-' . $user . '-institutionCode-' . $instution;
@@ -18,13 +20,25 @@ class AlmaSoapClient
 
     public function execute($function_name, array $params)
     {
-        if (is_null($this->_client))
-        {
+        if (is_null($this->_client)) {
             $this->_loadClient();
         }
 
-        $result =  $this->_client->$function_name($params);
-        return new \SimpleXMLElement($result->SearchResults);
+        $result = $this->_client->$function_name($params);
+        $base = new \SimpleXMLElement($result->SearchResults);
+
+        if ((string) $base->errorsExist === 'true') {
+            $this->_last_error = new \stdClass();
+            $this->_last_error->code = (string) $base->errorList->error->errorCode;
+            $this->_last_error->message = (string) $base->errorList->error->errorMessage;
+        }
+
+        return $base;
+    }
+
+    public function lastError()
+    {
+        return $this->_last_error;
     }
 
     private function _loadClient()
