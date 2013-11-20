@@ -1,7 +1,8 @@
 <?php
 
-require_once __DIR__ . '/BCLib/Alma/AlmaSoapClient.php';
-require_once __DIR__ . '/BCLib/Alma/User.php';
+use BCLib\Alma\AlmaServices;
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 $soap_user = ''; // e.g. 'webservice'
 $soap_institution = ''; // e.g. '01BC_INST'
@@ -33,37 +34,29 @@ $id_types = array(
 );
 
 // First create the SOAP client.
-$client = new \BCLib\Alma\AlmaSoapClient($soap_user, $soap_institution, $soap_pass, $wsdl);
+AlmaServices::initialize($soap_user, $soap_institution, $soap_pass);
+$user_services = AlmaServices::userInfoServices($wsdl);
 
-// Then create and load the user.
-$user = new \BCLib\Alma\User($client);
-
-if ($user->load($user_id))
-{
+if ($user = $user_services->getUser($user_id)) {
     echo $user->lastName() . ", " . $user->firstName() . $user->middleName() . "\n";
     echo $user->email() . "\n";
     echo $user->groupName($user_groups) . " ";
     echo $user->groupCode() . "\n";
 
-    if ($user->isActive())
-    {
+    if ($user->isActive()) {
         echo "User is active.\n";
     }
 
     echo "Identifiers\n";
-    foreach ($user->identifiers($id_types) as $id)
-    {
+    foreach ($user->identifiers($id_types) as $id) {
         echo "\t" . $id->value . " " . $id->name . " " . $id->code . "\n";
     }
 
     echo "Blocks\n";
-    foreach ($user->blocks() as $block)
-    {
+    foreach ($user->blocks() as $block) {
         echo "\t" . $block->code . " " . $block->type . " " . $block->status . " ";
         echo $block->creation_date . " " . $block->modification_date . "\n";
     }
-}
-else
-{
-    echo $user->lastError()->message . "\n";
+} else {
+    echo $user_services->lastError()->message . "\n";
 }

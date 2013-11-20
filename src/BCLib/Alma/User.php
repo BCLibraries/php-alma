@@ -7,32 +7,14 @@ require_once __DIR__ . '/Identifier.php';
 
 class User
 {
-    /** @var AlmaSoapClient */
-    private $_soap_client;
-
     /** @var \SimpleXMLElement */
     private $_xml;
 
     private $_last_error;
 
-    public function __construct(AlmaSoapClient $soap_client)
+    public function load(\SimpleXMLElement $xml)
     {
-        $this->_soap_client = $soap_client;
-    }
-
-    /**
-     * @param $identifier
-     *
-     * @return bool FALSE on error
-     */
-    public function load($identifier)
-    {
-        $params = array('arg0' => $identifier);
-        $base = $this->_soap_client->execute('getUserDetails', $params);
-        if ($this->_soap_client->lastError() === false) {
-            $children = $base->result->children('http://com/exlibris/urm/user_record/xmlbeans');
-            $this->_xml = $children[0];
-        }
+        $this->_xml = $xml;
     }
 
     public function firstName()
