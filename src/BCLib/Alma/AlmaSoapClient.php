@@ -23,7 +23,8 @@ class AlmaSoapClient
             $this->_loadClient();
         }
 
-        return $this->_client->$function_name($params);
+        $result =  $this->_client->$function_name($params);
+        return new \SimpleXMLElement($result->SearchResults);
     }
 
     private function _loadClient()

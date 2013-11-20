@@ -28,8 +28,7 @@ class User
     public function load($identifier)
     {
         $params = array('arg0' => $identifier);
-        $result = $this->_soap_client->execute('getUserDetails', $params);
-        $base = new \SimpleXMLElement($result->SearchResults);
+        $base = $this->_soap_client->execute('getUserDetails', $params);
 
         if ((string) $base->errorsExist === 'true') {
             $this->_last_error = new \stdClass();
