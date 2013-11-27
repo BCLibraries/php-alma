@@ -19,6 +19,7 @@ namespace BCLib\Alma;
  * @property string note
  * @property string year
  * @property string open_url
+ * @property string type
  */
 abstract class Citation
 {
@@ -34,10 +35,10 @@ abstract class Citation
 
     public function __get($property)
     {
-        $property = \strtolower($property);
         switch ($property) {
             case 'identifier':
             case 'status':
+            case 'type':
             case 'open_url':
                 return (string) $this->_xml->$property;
             case 'author':
@@ -46,10 +47,12 @@ abstract class Citation
             case 'pages':
             case 'note':
             case 'year':
-            case 'additional_person_name':
-            case 'place_of_publication':
             case 'call_number':
                 return (string) $this->_xml->metadata->$property;
+            case 'additional_person_name':
+                return (string) $this->_xml->metadata->Additional_Person_Name;
+            case 'place_of_publication':
+                return (string) $this->_xml->metadata->Place_of_Publication;
         }
     }
 }

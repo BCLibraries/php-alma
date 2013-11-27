@@ -11,6 +11,7 @@ namespace BCLib\Alma;
  * @property string journal_title
  * @property string volume
  * @property string issue
+ * @property string url
  */
 class Article extends Citation
 {
@@ -23,13 +24,16 @@ class Article extends Citation
 
         switch ($property) {
             case 'title':
-                return $this->_xml->metadata->article_title;
+                return (string) $this->_xml->metadata->article_title;
             case 'article_title':
             case 'journal_title':
             case 'volume':
             case 'issue':
+                return (string) $this->_xml->metadata->$property;
             case 'issn':
-                return $this->_xml->metadata->$property;
+                return (string) $this->_xml->metadata->ISSN;
+            case 'url':
+                return (string) $this->_xml->metadata->URL;
         }
 
         throw new \Exception("$property is not a valid Article property");
