@@ -24,15 +24,12 @@ class CitationFactory
     {
         switch ($xml->type) {
             case 'Physical Book':
-                $citation = clone $this->_book_prototype;
-                break;
+                return clone $this->_book_prototype;
             case 'Physical Article':
             case 'Electronic Article':
-                $citation = clone $this->_article_prototype;
-                break;
+                return clone $this->_article_prototype;
             default:
                 throw new \Exception($xml->type . ' is not a valid citation type');
         }
-        return $citation;
     }
 } 
