@@ -1,0 +1,508 @@
+<search_results count="1" cql="code=BI110 and section=01" from="0" to="10"
+                xmlns="http://com/exlibris/urm/fulfillment/webservice/xml_beans/course"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <results>
+        <course xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <course_information>
+                <identifier>9696528480001021</identifier>
+                <code>BI110</code>
+                <section>01</section>
+                <name>Aging Well Test Course</name>
+                <faculty>Biology</faculty>
+                <status>ACTIVE</status>
+                <start_date>2013-08-01Z</start_date>
+                <end_date>2013-12-31Z</end_date>
+                <hours>0</hours>
+                <processingDepartment>O'Neill Library Course Reserves</processingDepartment>
+                <participants>0</participants>
+                <terms>
+                    <term>Autumn</term>
+                    <term>Spring</term>
+                    <term>Summer</term>
+                </terms>
+                <searchableIds>
+                    <searchableId>BI010.38</searchableId>
+                    <searchableId>BI010.X9</searchableId>
+                </searchableIds>
+                <instructors>
+                    <instructor>Lastname, Firstname</instructor>
+                </instructors>
+                <instructor>
+                    <instructor>Lastname, Firstname</instructor>
+                    <instructorUserName>LASTNA</instructorUserName>
+                </instructor>
+            </course_information>
+            <reading_lists>
+                <reading_list>
+                    <identifier>9696548640001021</identifier>
+                    <code>BI110.01-Jones</code>
+                    <name>Aging Well-Jones</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696599560001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title</title>
+                                <publisher>U.S. Government Printing Office,</publisher>
+                                <year>2013</year>
+                                <ISBN xsi:nil="true"/>
+                                <edition xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication xsi:nil="true"/>
+                                <mms_id>99133776710001021</mms_id>
+                                <author>United States. Congress. Senate. Committee on Agriculture, Nutrition, and
+                                    Forestry,
+                                    author.
+                                </author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                                <URL>http://purl.fdlp.gov/GPO/gpo1234567</URL>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99133776710001021</open_url>
+                        </citation>
+                        <citation>
+                            <identifier>9696599580001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Second Fake Title</title>
+                                <publisher>Royal Society of Chemistry</publisher>
+                                <year>2013</year>
+                                <ISBN>1-2345-678-9</ISBN>
+                                <edition xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication/>
+                                <mms_id>99134934220001021</mms_id>
+                                <author xsi:nil="true"/>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99134934220001021</open_url>
+                        </citation>
+                        <citation>
+                            <identifier>9696599600001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Article</type>
+                            <metadata>
+                                <ISSN xsi:nil="true"/>
+                                <article_title>Fake Article Title</article_title>
+                                <journal_title xsi:nil="true"/>
+                                <volume>23</volume>
+                                <issue>2</issue>
+                                <year>2004</year>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication>[Washington, D.C. :</Place_of_Publication>
+                                <mms_id>99115028680001021</mms_id>
+                                <author xsi:nil="true"/>
+                                <chapter xsi:nil="true"/>
+                                <pages>23-48</pages>
+                                <note xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99115028680001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+                <reading_list>
+                    <identifier>9696548670001021</identifier>
+                    <code>BI110.01-Kidd</code>
+                    <name>Aging Well-Kidd</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696548680001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title Redux</title>
+                                <publisher>Publisher</publisher>
+                                <year>c2012.</year>
+                                <ISBN>9123456900 (pbk. : student ed.)</ISBN>
+                                <edition>12th ed.</edition>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name>Bob</Additional_Person_Name>
+                                <Place_of_Publication>Belmont, Calif. :</Place_of_Publication>
+                                <mms_id>99131573680001021</mms_id>
+                                <author>Webb</author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99131573680001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+                <reading_list>
+                    <identifier>9696592690001021</identifier>
+                    <code>BI110.01-Bridden</code>
+                    <name>Aging well-Bridden</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696592700001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title</title>
+                                <publisher>Publishing House</publisher>
+                                <year>2014</year>
+                                <ISBN>01234569 (package)</ISBN>
+                                <edition>10th Edition</edition>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name>Bob</Additional_Person_Name>
+                                <Place_of_Publication xsi:nil="true"/>
+                                <mms_id>99134803500001021</mms_id>
+                                <author>Alice</author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99134803500001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+            </reading_lists>
+        </course>
+        <course xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <course_information>
+                <identifier>9696528480001021</identifier>
+                <code>BI110</code>
+                <section>01</section>
+                <name>Aging Well Test Course</name>
+                <faculty>Biology</faculty>
+                <status>ACTIVE</status>
+                <start_date>2013-08-01Z</start_date>
+                <end_date>2013-12-31Z</end_date>
+                <hours>0</hours>
+                <processingDepartment>O'Neill Library Course Reserves</processingDepartment>
+                <participants>0</participants>
+                <terms>
+                    <term>Autumn</term>
+                    <term>Spring</term>
+                    <term>Summer</term>
+                </terms>
+                <searchableIds>
+                    <searchableId>BI010.38</searchableId>
+                    <searchableId>BI010.X9</searchableId>
+                </searchableIds>
+                <instructors>
+                    <instructor>Lastname, Firstname</instructor>
+                </instructors>
+                <instructor>
+                    <instructor>Lastname, Firstname</instructor>
+                    <instructorUserName>LASTNA</instructorUserName>
+                </instructor>
+            </course_information>
+            <reading_lists>
+                <reading_list>
+                    <identifier>9696548640001021</identifier>
+                    <code>BI110.01-Jones</code>
+                    <name>Aging Well-Jones</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696599560001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title</title>
+                                <publisher>U.S. Government Printing Office,</publisher>
+                                <year>2013</year>
+                                <ISBN xsi:nil="true"/>
+                                <edition xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication xsi:nil="true"/>
+                                <mms_id>99133776710001021</mms_id>
+                                <author>United States. Congress. Senate. Committee on Agriculture, Nutrition, and
+                                    Forestry,
+                                    author.
+                                </author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                                <URL>http://purl.fdlp.gov/GPO/gpo1234567</URL>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99133776710001021</open_url>
+                        </citation>
+                        <citation>
+                            <identifier>9696599580001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Second Fake Title</title>
+                                <publisher>Royal Society of Chemistry</publisher>
+                                <year>2013</year>
+                                <ISBN>1-2345-678-9</ISBN>
+                                <edition xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication/>
+                                <mms_id>99134934220001021</mms_id>
+                                <author xsi:nil="true"/>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99134934220001021</open_url>
+                        </citation>
+                        <citation>
+                            <identifier>9696599600001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Article</type>
+                            <metadata>
+                                <ISSN xsi:nil="true"/>
+                                <article_title>Fake Article Title</article_title>
+                                <journal_title xsi:nil="true"/>
+                                <volume>23</volume>
+                                <issue>2</issue>
+                                <year>2004</year>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication>[Washington, D.C. :</Place_of_Publication>
+                                <mms_id>99115028680001021</mms_id>
+                                <author xsi:nil="true"/>
+                                <chapter xsi:nil="true"/>
+                                <pages>23-48</pages>
+                                <note xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99115028680001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+                <reading_list>
+                    <identifier>9696548670001021</identifier>
+                    <code>BI110.01-Kidd</code>
+                    <name>Aging Well-Kidd</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696548680001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title Redux</title>
+                                <publisher>Publisher</publisher>
+                                <year>c2012.</year>
+                                <ISBN>9123456900 (pbk. : student ed.)</ISBN>
+                                <edition>12th ed.</edition>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name>Bob</Additional_Person_Name>
+                                <Place_of_Publication>Belmont, Calif. :</Place_of_Publication>
+                                <mms_id>99131573680001021</mms_id>
+                                <author>Webb</author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99131573680001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+                <reading_list>
+                    <identifier>9696592690001021</identifier>
+                    <code>BI110.01-Bridden</code>
+                    <name>Aging well-Bridden</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696592700001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title</title>
+                                <publisher>Publishing House</publisher>
+                                <year>2014</year>
+                                <ISBN>01234569 (package)</ISBN>
+                                <edition>10th Edition</edition>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name>Bob</Additional_Person_Name>
+                                <Place_of_Publication xsi:nil="true"/>
+                                <mms_id>99134803500001021</mms_id>
+                                <author>Alice</author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99134803500001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+            </reading_lists>
+        </course>
+        <course xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <course_information>
+                <identifier>9696528480001021</identifier>
+                <code>BI110</code>
+                <section>01</section>
+                <name>Aging Well Test Course</name>
+                <faculty>Biology</faculty>
+                <status>ACTIVE</status>
+                <start_date>2013-08-01Z</start_date>
+                <end_date>2013-12-31Z</end_date>
+                <hours>0</hours>
+                <processingDepartment>O'Neill Library Course Reserves</processingDepartment>
+                <participants>0</participants>
+                <terms>
+                    <term>Autumn</term>
+                    <term>Spring</term>
+                    <term>Summer</term>
+                </terms>
+                <searchableIds>
+                    <searchableId>BI010.38</searchableId>
+                    <searchableId>BI010.X9</searchableId>
+                </searchableIds>
+                <instructors>
+                    <instructor>Lastname, Firstname</instructor>
+                </instructors>
+                <instructor>
+                    <instructor>Lastname, Firstname</instructor>
+                    <instructorUserName>LASTNA</instructorUserName>
+                </instructor>
+            </course_information>
+            <reading_lists>
+                <reading_list>
+                    <identifier>9696548640001021</identifier>
+                    <code>BI110.01-Jones</code>
+                    <name>Aging Well-Jones</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696599560001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title</title>
+                                <publisher>U.S. Government Printing Office,</publisher>
+                                <year>2013</year>
+                                <ISBN xsi:nil="true"/>
+                                <edition xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication xsi:nil="true"/>
+                                <mms_id>99133776710001021</mms_id>
+                                <author>United States. Congress. Senate. Committee on Agriculture, Nutrition, and
+                                    Forestry,
+                                    author.
+                                </author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                                <URL>http://purl.fdlp.gov/GPO/gpo1234567</URL>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99133776710001021</open_url>
+                        </citation>
+                        <citation>
+                            <identifier>9696599580001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Second Fake Title</title>
+                                <publisher>Royal Society of Chemistry</publisher>
+                                <year>2013</year>
+                                <ISBN>1-2345-678-9</ISBN>
+                                <edition xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication/>
+                                <mms_id>99134934220001021</mms_id>
+                                <author xsi:nil="true"/>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99134934220001021</open_url>
+                        </citation>
+                        <citation>
+                            <identifier>9696599600001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Article</type>
+                            <metadata>
+                                <ISSN xsi:nil="true"/>
+                                <article_title>Fake Article Title</article_title>
+                                <journal_title xsi:nil="true"/>
+                                <volume>23</volume>
+                                <issue>2</issue>
+                                <year>2004</year>
+                                <Additional_Person_Name xsi:nil="true"/>
+                                <Place_of_Publication>[Washington, D.C. :</Place_of_Publication>
+                                <mms_id>99115028680001021</mms_id>
+                                <author xsi:nil="true"/>
+                                <chapter xsi:nil="true"/>
+                                <pages>23-48</pages>
+                                <note xsi:nil="true"/>
+                                <Call_Number xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99115028680001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+                <reading_list>
+                    <identifier>9696548670001021</identifier>
+                    <code>BI110.01-Kidd</code>
+                    <name>Aging Well-Kidd</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696548680001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title Redux</title>
+                                <publisher>Publisher</publisher>
+                                <year>c2012.</year>
+                                <ISBN>9123456900 (pbk. : student ed.)</ISBN>
+                                <edition>12th ed.</edition>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name>Bob</Additional_Person_Name>
+                                <Place_of_Publication>Belmont, Calif. :</Place_of_Publication>
+                                <mms_id>99131573680001021</mms_id>
+                                <author>Webb</author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99131573680001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+                <reading_list>
+                    <identifier>9696592690001021</identifier>
+                    <code>BI110.01-Bridden</code>
+                    <name>Aging well-Bridden</name>
+                    <status>Inactive</status>
+                    <citations>
+                        <citation>
+                            <identifier>9696592700001021</identifier>
+                            <status>BeingPrepared</status>
+                            <type>Physical Book</type>
+                            <metadata>
+                                <title>Fake Title</title>
+                                <publisher>Publishing House</publisher>
+                                <year>2014</year>
+                                <ISBN>01234569 (package)</ISBN>
+                                <edition>10th Edition</edition>
+                                <Call_Number xsi:nil="true"/>
+                                <Additional_Person_Name>Bob</Additional_Person_Name>
+                                <Place_of_Publication xsi:nil="true"/>
+                                <mms_id>99134803500001021</mms_id>
+                                <author>Alice</author>
+                                <chapter xsi:nil="true"/>
+                                <pages xsi:nil="true"/>
+                                <note xsi:nil="true"/>
+                            </metadata>
+                            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99134803500001021</open_url>
+                        </citation>
+                    </citations>
+                </reading_list>
+            </reading_lists>
+        </course>
+
+    </results>
+</search_results>

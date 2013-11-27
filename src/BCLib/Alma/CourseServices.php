@@ -13,8 +13,10 @@ class CourseServices
         $this->_section_prototype = $section_prototype;
     }
 
-    public function getCourse($identifier)
+    public function getCourse($identifier, $from = 0, $to = 10)
     {
+        $query = "searchableId=$identifier";
+        return $this->_sendQuery($query, $from, $to);
     }
 
     /**
@@ -32,6 +34,11 @@ class CourseServices
             $query .= " and section=$section_number";
         }
 
+        return $this->_sendQuery($query, $from, $to);
+    }
+
+    protected function _sendQuery($query, $from, $to)
+    {
         $params = array('arg0' => $query, 'arg1' => $from, 'arg2' => $to);
         $base = $this->_soap_client->execute('searchCourseInformation', $params);
         if ($this->_soap_client->lastError() === false) {
