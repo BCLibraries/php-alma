@@ -17,9 +17,11 @@ namespace BCLib\Alma;
  * @property string        hours
  * @property string        processing_department
  * @property string        participants
+ * @property string        instructor_name
+ * @property string        instructor_username
  * @property ReadingList[] reading_lists
  * @property string[]      searchable_ids
- * @property string[]      reading_lists
+ * @property string[]      terms
  */
 class Section
 {
@@ -80,9 +82,13 @@ class Section
             case 'end_date':
             case 'hours':
             case 'participants':
-                return $this->_xml->course_information->$property;
+                return (string) $this->_xml->course_information->$property;
+            case 'instructor_name':
+                return (string) $this->_xml->course_information->instructor->instructor;
+            case 'instructor_username':
+                return (string) $this->_xml->course_information->instructor->instructorUserName;
             case 'processing_department':
-                return $this->_xml->course_information->processingDepartment;
+                return (string) $this->_xml->course_information->processingDepartment;
             case 'reading_lists':
                 $this->_lazyLoadReadingLists();
                 return $this->_reading_lists;
