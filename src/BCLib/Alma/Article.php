@@ -32,8 +32,6 @@ class Article extends Citation
                 return (string) $this->_xml->metadata->$property;
             case 'issn':
                 return (string) $this->_xml->metadata->ISSN;
-            case 'url':
-                return (string) $this->_xml->metadata->URL;
         }
 
         throw new \Exception("$property is not a valid Article property");

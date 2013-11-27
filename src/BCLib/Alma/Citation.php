@@ -20,6 +20,7 @@ namespace BCLib\Alma;
  * @property string year
  * @property string open_url
  * @property string type
+ * @property string url
  */
 abstract class Citation
 {
@@ -53,6 +54,8 @@ abstract class Citation
                 return (string) $this->_xml->metadata->Additional_Person_Name;
             case 'place_of_publication':
                 return (string) $this->_xml->metadata->Place_of_Publication;
+            case 'url':
+                return (string) $this->_xml->metadata->URL;
         }
     }
 }

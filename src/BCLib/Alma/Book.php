@@ -22,10 +22,11 @@ class Book extends Citation
 
         switch ($property) {
             case 'publisher':
-            case 'isbn':
             case 'edition':
             case 'title':
                 return (string) $this->_xml->metadata->$property;
+            case 'isbn':
+                return (string) $this->_xml->metadata->ISBN;
         }
 
         throw new \Exception("$property is not a valid Book property");
