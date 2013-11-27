@@ -1,0 +1,78 @@
+<reading_list>
+    <identifier>9696548640001021</identifier>
+    <code>BI110.01-Jones</code>
+    <name>Aging Well-Jones</name>
+    <status>Inactive</status>
+    <citations>
+        <citation>
+            <identifier>9696599560001021</identifier>
+            <status>BeingPrepared</status>
+            <type>Physical Book</type>
+            <metadata>
+                <title>Strengthening conservation through the 2012 farm bill : hearing before the Committee on
+                    Agriculture, Nutrition, and Forestry, United States Senate, One Hundred Twelfth Congress, second
+                    session, February 28, 2012.
+                </title>
+                <publisher>U.S. Government Printing Office,</publisher>
+                <year>2013</year>
+                <ISBN />
+                <edition />
+                <Call_Number />
+                <Additional_Person_Name />
+                <Place_of_Publication />
+                <mms_id>99133776710001021</mms_id>
+                <author>United States. Congress. Senate. Committee on Agriculture, Nutrition, and Forestry,
+                    author.
+                </author>
+                <chapter />
+                <pages />
+                <note />
+                <URL>http://purl.fdlp.gov/GPO/gpo35980</URL>
+            </metadata>
+            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99133776710001021</open_url>
+        </citation>
+        <citation>
+            <identifier>9696599580001021</identifier>
+            <status>BeingPrepared</status>
+            <type>Physical Book</type>
+            <metadata>
+                <title>Nutrition, Functional and Sensory Properties of Foods</title>
+                <publisher>Royal Society of Chemistry</publisher>
+                <year>2013</year>
+                <ISBN>1-84973-644-8</ISBN>
+                <edition />
+                <Call_Number />
+                <Additional_Person_Name />
+                <Place_of_Publication/>
+                <mms_id>99134934220001021</mms_id>
+                <author />
+                <chapter />
+                <pages />
+                <note />
+            </metadata>
+            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99134934220001021</open_url>
+        </citation>
+        <citation>
+            <identifier>9696599600001021</identifier>
+            <status>BeingPrepared</status>
+            <type>Physical Article</type>
+            <metadata>
+                <ISSN />
+                <article_title>Fake Article</article_title>
+                <journal_title />
+                <volume>23</volume>
+                <issue>2</issue>
+                <year>2004</year>
+                <Additional_Person_Name />
+                <Place_of_Publication>[Washington, D.C. :</Place_of_Publication>
+                <mms_id>99115028680001021</mms_id>
+                <author />
+                <chapter />
+                <pages>23-48</pages>
+                <note />
+                <Call_Number />
+            </metadata>
+            <open_url>http://bc-primo.hosted.exlibrisgroup.com/openurl/BCL/services_page?dscnt=1&amp;vid=services_page&amp;u.ignore_date_coverage=true&amp;rft.mms_id=99115028680001021</open_url>
+        </citation>
+    </citations>
+</reading_list>

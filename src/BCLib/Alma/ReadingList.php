@@ -58,7 +58,6 @@ class ReadingList
             case 'citations':
                 $this->_lazyLoadCitations();
                 return $this->_citations;
-
         }
     }
 } 
