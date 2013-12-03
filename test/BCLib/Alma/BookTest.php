@@ -2,7 +2,9 @@
 
 namespace BCLib\Alma;
 
-class BookTest extends \PHPUnit_Framework_TestCase
+require_once 'XMLLoadingTest.php';
+
+class BookTest extends XMLLoadingTest
 {
     protected $_book;
 

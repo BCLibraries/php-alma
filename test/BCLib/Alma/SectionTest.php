@@ -2,7 +2,9 @@
 
 namespace BCLib\Alma;
 
-class SectionTest extends \PHPUnit_Framework_TestCase
+require_once 'XMLLoadingTest.php';
+
+class SectionTest extends XMLLoadingTest
 {
     /**
      * @var Section
@@ -53,8 +55,4 @@ class SectionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($searchable_ids, $this->_section->searchable_ids);
     }
 
-    protected function _getExampleXML($file_name)
-    {
-        return simplexml_load_file(__DIR__ . "/../../examples/$file_name");
-    }
 }

@@ -2,7 +2,9 @@
 
 namespace BCLib\Alma;
 
-class CourseServicesTest extends \PHPUnit_Framework_TestCase
+require_once 'XMLLoadingTest.php';
+
+class CourseServicesTest extends XMLLoadingTest
 {
     public function testSearchCourseQueryCorrect()
     {

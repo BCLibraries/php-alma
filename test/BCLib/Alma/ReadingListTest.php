@@ -2,7 +2,9 @@
 
 namespace BCLib\Alma;
 
-class ReadingListTest extends \PHPUnit_Framework_TestCase
+require_once 'XMLLoadingTest.php';
+
+class ReadingListTest extends XMLLoadingTest
 {
     public function testFieldsWork()
     {

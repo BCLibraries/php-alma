@@ -2,7 +2,9 @@
 
 namespace BCLib\Alma;
 
-class CitationFactoryTest extends \PHPUnit_Framework_TestCase
+require_once 'XMLLoadingTest.php';
+
+class CitationFactoryTest extends XMLLoadingTest
 {
     /**
      * @var CitationFactory

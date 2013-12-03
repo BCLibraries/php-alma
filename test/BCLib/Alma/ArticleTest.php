@@ -2,7 +2,9 @@
 
 namespace BCLib\Alma;
 
-class ArticleTest extends \PHPUnit_Framework_TestCase
+require_once 'XMLLoadingTest.php';
+
+class ArticleTest extends XMLLoadingTest
 {
     /**
      * @var Article
