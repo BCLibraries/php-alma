@@ -114,3 +114,7 @@ if ($courses = $course_services->getCourses('AD100', '03', 0, 10)) {
     echo $course_services->lastError()->message;
 }
 ```
+
+## License
+
+See MIT-LICENSE
