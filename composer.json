@@ -2,7 +2,7 @@
     "name": "bclibraries/php-alma",
     "description": "Access to Alma Web services in PHP.",
     "keywords": ["Alma", "library"],
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ben Florin",
