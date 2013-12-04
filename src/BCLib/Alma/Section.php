@@ -61,7 +61,7 @@ class Section
 
     protected function _lazyLoadReadingLists()
     {
-        if (count($this->_reading_lists) == 0) {
+        if (count($this->_complete_lists) + count($this->_incomplete_lists) == 0) {
             foreach ($this->_xml->reading_lists->reading_list as $list_xml) {
                 $list = clone $this->_list_prototpye;
                 $list->load($list_xml);
@@ -123,18 +123,6 @@ class Section
                     'term'
                 );
                 return $this->_terms;
-
         }
-    }
-
-    public function completeLists()
-    {
-        $return_array = array();
-        foreach ($this->reading_lists as $list) {
-            if ($list->status = 'Complete') {
-                $return_array[] = $list;
-            }
-        }
-        return $return_array;
     }
 }

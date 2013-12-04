@@ -19,7 +19,7 @@ if ($courses = $course_services->getCourses('AD100', '03', 0, 10)) {
         echo $course->identifier . "\n";
         echo $course->name . "\n";
 
-        foreach ($course->reading_lists as $list) {
+        foreach ($course->complete_lists as $list) {
             echo "\t" . $list->identifier . "\n";
             echo "\t" . $list->name . "\n";
 
