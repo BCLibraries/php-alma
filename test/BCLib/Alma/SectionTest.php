@@ -20,15 +20,6 @@ class SectionTest extends XMLLoadingTest
         $this->_section->load($this->_getExampleXML('course-01.xml'));
     }
 
-    public function testReadingListsAreLoaded()
-    {
-        $lists = $this->_section->reading_lists;
-        $this->assertEquals(3, count($lists));
-        foreach ($lists as $list) {
-            $this->assertInstanceOf('\BCLib\Alma\ReadingList', $list);
-        }
-    }
-
     public function testFieldsWork()
     {
         $this->assertEquals('9696528480001021', $this->_section->identifier);

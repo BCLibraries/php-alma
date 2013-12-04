@@ -19,7 +19,8 @@ namespace BCLib\Alma;
  * @property string        participants
  * @property string        instructor_name
  * @property string        instructor_username
- * @property ReadingList[] reading_lists
+ * @property ReadingList[] complete_lists
+ * @property ReadingList[] incomplete_lists
  * @property string[]      searchable_ids
  * @property string[]      terms
  */
@@ -27,7 +28,16 @@ class Section
 {
     protected $_terms = array();
     protected $_searchable_ids = array();
-    protected $_reading_lists = array();
+
+    /**
+     * @var ReadingList[]
+     */
+    protected $_complete_lists;
+
+    /**
+     * @var ReadingList[]
+     */
+    protected $_incomplete_lists;
 
     /**
      * @var \SimpleXMLElement
@@ -55,7 +65,11 @@ class Section
             foreach ($this->_xml->reading_lists->reading_list as $list_xml) {
                 $list = clone $this->_list_prototpye;
                 $list->load($list_xml);
-                $this->_reading_lists[] = $list;
+                if ($list->status = "Complete") {
+                    $this->_complete_lists[] = $list;
+                } else {
+                    $this->_incomplete_lists[] = $list;
+                }
             }
         }
     }
@@ -89,9 +103,12 @@ class Section
                 return (string) $this->_xml->course_information->instructor->instructorUserName;
             case 'processing_department':
                 return (string) $this->_xml->course_information->processingDepartment;
-            case 'reading_lists':
+            case 'complete_lists':
                 $this->_lazyLoadReadingLists();
-                return $this->_reading_lists;
+                return $this->_complete_lists;
+            case 'incomplete_lists':
+                $this->_lazyLoadReadingLists();
+                return $this->_incomplete_lists;
             case 'searchable_ids':
                 $this->_lazyLoadStrings(
                     $this->_searchable_ids,
@@ -108,5 +125,16 @@ class Section
                 return $this->_terms;
 
         }
+    }
+
+    public function completeLists()
+    {
+        $return_array = array();
+        foreach ($this->reading_lists as $list) {
+            if ($list->status = 'Complete') {
+                $return_array[] = $list;
+            }
+        }
+        return $return_array;
     }
 }
