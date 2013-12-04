@@ -10,13 +10,22 @@ namespace BCLib\Alma;
 
 class UserInfoServices
 {
+    /**
+     * @var AlmaSoapClient
+     */
     protected $_soap_client;
     protected $_user_prototype;
+    protected $_group_codes;
+    protected $_id_types;
 
-    public function __construct(AlmaSoapClient $client, User $user_prototype)
-    {
+    public function __construct(
+        AlmaSoapClient $client,
+        User $user_prototype,
+        array $group_codes
+    ) {
         $this->_soap_client = $client;
         $this->_user_prototype = $user_prototype;
+        $this->_group_codes = $group_codes;
     }
 
     public function getUser($identifier)
@@ -27,7 +36,7 @@ class UserInfoServices
         if ($this->_soap_client->lastError() === false) {
             $children = $base->result->children('http://com/exlibris/urm/user_record/xmlbeans');
             $user = clone $this->_user_prototype;
-            $user->load($children[0]);
+            $user->load($children[0], $this->_group_codes);
         }
         return $user;
     }

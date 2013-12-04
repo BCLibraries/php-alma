@@ -1,0 +1,1145 @@
+<userRecord xmlns:xb="http://com/exlibris/urm/user_record/xmlbeans"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <owneredEntity>
+        <createdBy>patronLoader</createdBy>
+        <creationDate>20130419040000</creationDate>
+        <modifiedBy>patronLoader</modifiedBy>
+        <modificationDate>20131203050000</modificationDate>
+    </owneredEntity>
+    <userDetails>
+        <birthDate/>
+        <defaultLanguage>en</defaultLanguage>
+        <expiryDate>20140508035959</expiryDate>
+        <externalId>SIS</externalId>
+        <firstName>Lamont</firstName>
+        <jobDescription xsi:nil="true"/>
+        <jobTitle xsi:nil="true"/>
+        <lastName>Boyd</lastName>
+        <middleName>Scott</middleName>
+        <campusCode xsi:nil="true"/>
+        <pinNumber xsi:nil="true"/>
+        <purgeDate>20140507040000</purgeDate>
+        <recordType>Public</recordType>
+        <status>Active</status>
+        <userGroup>08</userGroup>
+        <userName>BOYDL9</userName>
+        <userType>External</userType>
+        <webSiteUrl xsi:nil="true"/>
+    </userDetails>
+    <userNoteList>
+        <userNote>
+            <owneredEntity>
+                <createdBy>EX_LIBRIS</createdBy>
+                <modifiedBy xsi:nil="true"/>
+            </owneredEntity>
+            <note>Bor Status: BC Staff</note>
+            <type>Library</type>
+            <userViewable>false</userViewable>
+        </userNote>
+    </userNoteList>
+    <userBlockList>
+        <userBlock>
+            <owneredEntity>
+                <createdBy>Boyd, Lamont</createdBy>
+                <creationDate>20131203201050</creationDate>
+                <modifiedBy>Boyd, Lamont</modifiedBy>
+                <modificationDate>20131203201050</modificationDate>
+            </owneredEntity>
+            <type>General</type>
+            <blockDefinitionId>OTHER</blockDefinitionId>
+            <status>Active</status>
+            <note>Second test block</note>
+        </userBlock>
+        <userBlock>
+            <owneredEntity>
+                <createdBy>Boyd, Lamont</createdBy>
+                <creationDate>20131203201037</creationDate>
+                <modifiedBy>Boyd, Lamont</modifiedBy>
+                <modificationDate>20131203201037</modificationDate>
+            </owneredEntity>
+            <type>General</type>
+            <blockDefinitionId>CR</blockDefinitionId>
+            <status>Active</status>
+            <note>Test block</note>
+        </userBlock>
+    </userBlockList>
+    <userIdentifiers>
+        <userIdentifier>
+            <owneredEntity>
+                <createdBy>patronLoader</createdBy>
+                <creationDate>20131203050000</creationDate>
+                <modifiedBy>patronLoader</modifiedBy>
+                <modificationDate>20131203050000</modificationDate>
+            </owneredEntity>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <type>01</type>
+            <value>12345678</value>
+        </userIdentifier>
+        <userIdentifier>
+            <owneredEntity>
+                <createdBy>patronLoader</createdBy>
+                <creationDate>20131203050000</creationDate>
+                <modifiedBy>patronLoader</modifiedBy>
+                <modificationDate>20131203050000</modificationDate>
+            </owneredEntity>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <type>05</type>
+            <value>87654321</value>
+        </userIdentifier>
+    </userIdentifiers>
+    <userAddressList>
+        <userAddress preferred="true">
+            <line1>4597 Liberty Avenue</line1>
+            <line2>Apartment 7</line2>
+            <line3 xsi:nil="true"/>
+            <line4 xsi:nil="true"/>
+            <line5 xsi:nil="true"/>
+            <country xsi:nil="true"/>
+            <city>Los Angeles</city>
+            <postalCode>90071</postalCode>
+            <note xsi:nil="true"/>
+            <startDate>20120817040000</startDate>
+            <endDate>20140817040000</endDate>
+            <stateProvince>CA</stateProvince>
+            <types>
+                <userAddressTypes>home</userAddressTypes>
+            </types>
+        </userAddress>
+        <userEmail preferred="true">
+            <description xsi:nil="true"/>
+            <email>LamontEBoyd@exammple.com</email>
+            <types>
+                <userEmailTypes>personal</userEmailTypes>
+            </types>
+        </userEmail>
+        <userPhone preferred="false" preferredSMS="false">
+            <phone>6175555555</phone>
+            <types>
+                <userPhoneTypes>home</userPhoneTypes>
+            </types>
+        </userPhone>
+        <userPhone preferred="true" preferredSMS="false">
+            <phone>6175551234</phone>
+            <types>
+                <userPhoneTypes>office</userPhoneTypes>
+            </types>
+        </userPhone>
+    </userAddressList>
+    <userRoleList>
+        <userRole>
+            <owneredEntity>
+                <createdBy>EX_LIBRIS</createdBy>
+                <creationDate>20110119120000</creationDate>
+                <modifiedBy xsi:nil="true"/>
+                <modificationDate>20120627120000</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>200</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>210</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>225</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>53</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>29</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>57</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204335</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204335</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>12</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>234</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204335</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204335</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>226</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204335</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204335</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>224</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204335</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204335</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>210</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195804</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195804</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>222</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195804</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195804</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>223</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195804</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195804</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>26</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195804</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195804</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>220</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>29</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>53</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>210</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>209</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>12</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>51</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>38</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>215</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>230</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>231</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20120718162630</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.31591540001021</scope>
+            <roleType>32</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20120718162550</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.31589510001021</scope>
+            <roleType>221</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>33</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>218</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>216</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195802</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195802</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>217</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195802</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195802</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>46</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195802</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195802</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>37</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195802</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195802</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>54</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195802</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195802</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>55</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195802</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195802</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>47</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195802</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195802</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>45</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.31589510001021</scope>
+            <roleType>51</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.31589510001021</scope>
+            <roleType>32</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.31590280001021</scope>
+            <roleType>51</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.12900830001021</scope>
+            <roleType>51</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>215</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.12900830001021</scope>
+            <roleType>32</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>21</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>214</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>38</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>29</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>204</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>210</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>209</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>205</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>53</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>52</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>50</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>36</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>56</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>55</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>54</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>43</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>44</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>34</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>33</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195742</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195742</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>41</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195803</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195803</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>214</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195743</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195743</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021.31590280001021</scope>
+            <roleType>32</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>admin_internal</createdBy>
+                <creationDate>20120501195741</creationDate>
+                <modifiedBy>Ex Libris</modifiedBy>
+                <modificationDate>20120501195741</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>37</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204047</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204047</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope xsi:nil="true"/>
+            <roleType>12</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>226</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204048</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204048</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>224</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204335</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204335</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>225</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204335</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204335</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>53</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130220155457</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130220155457</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>372</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130220155457</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130220155457</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>236</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130220155457</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130220155457</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>232</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>ADMIN</createdBy>
+                <creationDate>20130228204335</creationDate>
+                <modifiedBy>ADMIN</modifiedBy>
+                <modificationDate>20130228204335</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Inactive</status>
+            <scope>1010.1021</scope>
+            <roleType>29</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>BOYDL9</createdBy>
+                <creationDate>20130107221518</creationDate>
+                <modifiedBy>BOYDL9</modifiedBy>
+                <modificationDate>20130107221518</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>235</roleType>
+        </userRole>
+        <userRole>
+            <owneredEntity>
+                <createdBy>BOYDL9</createdBy>
+                <creationDate>20130107221519</creationDate>
+                <modifiedBy>BOYDL9</modifiedBy>
+                <modificationDate>20130107221519</modificationDate>
+            </owneredEntity>
+            <details xsi:nil="true"/>
+            <note xsi:nil="true"/>
+            <status>Active</status>
+            <scope>1010.1021</scope>
+            <roleType>233</roleType>
+        </userRole>
+    </userRoleList>
+    <userStatisticalCategoriesList>
+        <userCategory>
+            <owneredEntity>
+                <createdBy>patronLoader</createdBy>
+                <creationDate>20131203050000</creationDate>
+                <modifiedBy>patronLoader</modifiedBy>
+                <modificationDate>20131203050000</modificationDate>
+            </owneredEntity>
+            <note>2016S</note>
+            <statisticalCategory>STAC_EXPECT_GRAD_TERM</statisticalCategory>
+        </userCategory>
+    </userStatisticalCategoriesList>
+</userRecord>

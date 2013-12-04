@@ -17,16 +17,17 @@ class AlmaServices
         AlmaServices::$_wsdl_directory = __DIR__ . '/../../../wsdl';
     }
 
-    public static function userInfoServices($wsdl = null)
+    public static function userInfoServices($wsdl = null, $group_names = array(), $id_types = array())
     {
         $wsdl = is_null($wsdl) ? AlmaServices::$_wsdl_directory . '/UserWebServices.xml' : $wsdl;
         $client = AlmaServices::_getSoapClient($wsdl);
-        return new UserInfoServices($client, new User());
+        $user = new User(new Identifier($id_types), new Block());
+        return new UserInfoServices($client, $user, $group_names);
     }
 
     public static function courseServices($wsdl = null)
     {
-        $wsdl = is_null($wsdl) ? AlmaServices::$_wsdl_directory . '/UserWebServices.xml' : $wsdl;
+        $wsdl = is_null($wsdl) ? AlmaServices::$_wsdl_directory . '/CourseWebServices.xml' : $wsdl;
         $client = AlmaServices::_getSoapClient($wsdl);
 
         $citation_factory = new CitationFactory(new Book(), new Article());

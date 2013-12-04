@@ -4,6 +4,9 @@ namespace BCLib\Alma;
 
 class CourseServices
 {
+    /**
+     * @var AlmaSoapClient
+     */
     protected $_soap_client;
     protected $_section_prototype;
 

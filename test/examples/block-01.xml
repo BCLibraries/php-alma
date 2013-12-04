@@ -1,0 +1,12 @@
+<userBlock xmlns:xb="http://com/exlibris/urm/user_record/xmlbeans">
+    <owneredEntity>
+        <createdBy>Florin, Benjamin</createdBy>
+        <creationDate>20131203201037</creationDate>
+        <modifiedBy>Florin, Benjamin</modifiedBy>
+        <modificationDate>20131203201127</modificationDate>
+    </owneredEntity>
+    <type>General</type>
+    <blockDefinitionId>CR</blockDefinitionId>
+    <status>Active</status>
+    <note>Test block</note>
+</userBlock>

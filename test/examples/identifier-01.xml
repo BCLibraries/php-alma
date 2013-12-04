@@ -1,0 +1,13 @@
+<userIdentifier xmlns:xb="http://com/exlibris/urm/user_record/xmlbeans"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <owneredEntity>
+        <createdBy>patronLoader</createdBy>
+        <creationDate>20131203050000</creationDate>
+        <modifiedBy>patronLoader</modifiedBy>
+        <modificationDate>20131203050000</modificationDate>
+    </owneredEntity>
+    <note xsi:nil="true"/>
+    <status>Active</status>
+    <type>01</type>
+    <value>12345678</value>
+</userIdentifier>

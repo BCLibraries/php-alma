@@ -9,8 +9,6 @@ $soap_institution = ''; // e.g. '01BC_INST'
 $soap_pass = '';
 $wsdl = __DIR__ . '/UserWebServices.xml';
 
-$user_id = ''; // User ID used by Alma.
-
 // Optional map of user group codes to names.
 $user_groups = array(
     '01' => 'BC Undergraduate',
@@ -35,26 +33,28 @@ $id_types = array(
 
 // First create the SOAP client.
 AlmaServices::initialize($soap_user, $soap_institution, $soap_pass);
-$user_services = AlmaServices::userInfoServices($wsdl);
+$user_services = AlmaServices::userInfoServices($wsdl, $user_groups, $id_types);
 
-if ($user = $user_services->getUser($user_id)) {
-    echo $user->lastName() . ", " . $user->firstName() . $user->middleName() . "\n";
-    echo $user->email() . "\n";
-    echo $user->groupName($user_groups) . " ";
-    echo $user->groupCode() . "\n";
+if ($user = $user_services->getUser('florinb')) {
+    echo $user->last_name . ", " . $user->first_name . $user->middle_name . "\n";
+    echo $user->email . "\n";
+    echo $user->group_name . "\n";
+    echo $user->group_code . "\n";
 
-    if ($user->isActive()) {
+    if ($user->is_active) {
         echo "User is active.\n";
+    } else {
+        echo "User is not active.\n";
     }
 
     echo "Identifiers\n";
-    foreach ($user->identifiers($id_types) as $id) {
+    foreach ($user->identifiers as $id) {
         echo "\t" . $id->value . " " . $id->name . " " . $id->code . "\n";
     }
 
     echo "Blocks\n";
-    foreach ($user->blocks() as $block) {
-        echo "\t" . $block->code . " " . $block->type . " " . $block->status . " ";
+    foreach ($user->blocks as $block) {
+        echo "\t" . $block->code . " " . $block->_type . " " . $block->status . " ";
         echo $block->creation_date . " " . $block->modification_date . "\n";
     }
 } else {
