@@ -1,5 +1,5 @@
 {
-    "name": "bclib/php-alma",
+    "name": "bclibraries/php-alma",
     "description": "Access to Alma Web services in PHP.",
     "keywords": ["Alma", "library"],
     "license": "proprietary",
