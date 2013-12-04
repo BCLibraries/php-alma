@@ -11,7 +11,7 @@ class AlmaSoapClient
 
     private $_last_error = false;
 
-    public function __construct($user, $institution, $password, $wsdl)
+    public function __construct($user, $password, $institution, $wsdl)
     {
         $this->_user = 'AlmaSDK-' . $user . '-institutionCode-' . $institution;
         $this->_password = $password;

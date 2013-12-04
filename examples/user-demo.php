@@ -32,7 +32,7 @@ $id_types = array(
 );
 
 // First create the SOAP client.
-AlmaServices::initialize($soap_user, $soap_institution, $soap_pass);
+AlmaServices::initialize($soap_user, $soap_pass, $soap_institution,);
 $user_services = AlmaServices::userInfoServices($wsdl, $user_groups, $id_types);
 
 if ($user = $user_services->getUser('florinb')) {

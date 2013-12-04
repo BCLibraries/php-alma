@@ -49,7 +49,7 @@ $soap_user = ''; // e.g. 'webservice'
 $soap_institution = ''; // e.g. '01BC_INST'
 $soap_pass = '';
 
-AlmaServices::initialize($soap_user, $soap_institution, $soap_pass);
+AlmaServices::initialize($soap_user, $soap_pass, $soap_institution);
 ```
 
 ### Users 
