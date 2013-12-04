@@ -2,6 +2,39 @@
 
 Utilities for interacting with Alma Web Services in PHP. Currently read access is provided for two SOAP service: User Info services and Course services. 
 
+### Installation
+
+`php-alma` uses the [Composer](http://getcomposer.org/) dependency management system. To install 
+
+1. If you haven't already, [install `composer.phar`](http://getcomposer.org/doc/00-intro.md#installation-nix). To install `composer.phar` in the `/usr/bin` directory on Linux/OS X:
+ 
+		sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin
+
+2. Create a `composer.json` file. The example below will install `php-alma`:
+
+
+		{
+		  "name":"your-org/your-project",
+		  "description": "Describe your project",
+		  "license":"MIT",
+		  "repositories": [
+		    {
+		        "type": "vcs",
+		        "url": "https://github.com/BCLibraries/php-alma"
+		    }
+		  ],
+		    "require": {
+		            "bclibraries/php-alma" : "master"
+		    },
+		    "minimum-stability": "dev"
+		 }
+    
+3. Install using `composer.phar`:
+
+		php composer.phar install
+
+
+Composer will load all the required dependencies and create an `vendor/autoload.php` file to handle autoloading classes.
 
 ### Connecting
 
@@ -9,6 +42,8 @@ To start:
 
 ```php
 use BCLib\Alma\AlmaServices;
+
+require_once __DIR__.'/vendor/autoload.php';
 
 $soap_user = ''; // e.g. 'webservice'
 $soap_institution = ''; // e.g. '01BC_INST'
@@ -79,8 +114,3 @@ if ($courses = $course_services->getCourses('AD100', '03', 0, 10)) {
     echo $course_services->lastError()->message;
 }
 ```
-
-Future plans:
-* error handling
-* tests
-* Composer-ize
