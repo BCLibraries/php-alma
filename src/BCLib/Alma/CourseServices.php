@@ -17,7 +17,7 @@ class CourseServices
      */
     protected $_cache;
 
-    public function __construct(AlmaSoapClient $client, Section $section_prototype, AlmaCache $cache = null)
+    public function __construct(AlmaSoapClient $client, Section $section_prototype, AlmaCache $cache)
     {
         $this->_soap_client = $client;
         $this->_section_prototype = $section_prototype;

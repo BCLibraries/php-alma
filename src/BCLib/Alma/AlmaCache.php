@@ -21,27 +21,60 @@ class AlmaCache
 
     public function saveSection(Section $section, $lifetime = false)
     {
+        $key = $this->_sectionCacheKey($section->code, $section->section);
+        $this->_save($key, $section, $lifetime);
+    }
+
+    public function saveUser(User $user, $lifetime = false)
+    {
+        $key = $this->_userCacheKey($user->identifiers[0]);
+        $this->_save($key, $user, $lifetime);
+    }
+
+    public function _save($key, $value, $lifetime)
+    {
         if ($this->_cache instanceof Cache) {
-            $key = $this->_sectionCacheKey($section->code, $section->section);
-            $this->_cache->save($key, $section, $lifetime);
+            $this->_cache->save($key, $value, $lifetime);
         }
     }
 
     public function getSection($code, $section)
     {
+        $key = $this->_sectionCacheKey($code, $section);
+        return $this->_read($key);
+    }
+
+    public function getUser($id)
+    {
+        $key = $this->_sectionCacheKey($id);
+        return $this->_read($key);
+    }
+
+    protected function _read($key)
+    {
         if (!$this->_cache instanceof Cache) {
             return null;
         }
-        $key = $this->_sectionCacheKey($code, $section);
         return $this->_cache->fetch($key);
     }
 
     public function containsSection($code, $section)
     {
+        $key = $this->_sectionCacheKey($code, $section);
+        return $this->_cache->contains($key);
+    }
+
+    public function containsUser($id)
+    {
+        $key = $this->_userCacheKey($id);
+        return $this->_contains($key);
+    }
+
+    protected function _contains($key)
+    {
         if (!$this->_cache instanceof Cache) {
             return false;
         }
-        $key = $this->_sectionCacheKey($code, $section);
         return $this->_cache->contains($key);
     }
 
@@ -50,4 +83,8 @@ class AlmaCache
         return $this->_prefix . ":section:" . $code . ":" . $section;
     }
 
+    protected function _userCacheKey($id)
+    {
+        return $this->_prefix . ":user:" . $id;
+    }
 } 

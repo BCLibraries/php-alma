@@ -165,8 +165,6 @@ class CourseServicesTest extends XMLLoadingTest
         foreach ($sections as $section) {
             $this->assertInstanceOf('\BCLib\Alma\Section', $section);
         }
-
-
     }
 
     protected function _getExampleXML($file_name)

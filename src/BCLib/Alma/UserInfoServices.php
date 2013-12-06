@@ -18,14 +18,21 @@ class UserInfoServices
     protected $_group_codes;
     protected $_id_types;
 
+    /**
+     * @var \BClib\Alma\AlmaCache
+     */
+    protected $_cache;
+
     public function __construct(
         AlmaSoapClient $client,
         User $user_prototype,
-        array $group_codes
+        array $group_codes,
+        AlmaCache $cache
     ) {
         $this->_soap_client = $client;
         $this->_user_prototype = $user_prototype;
         $this->_group_codes = $group_codes;
+        $this->_cache = $cache;
     }
 
     public function getUser($identifier)
