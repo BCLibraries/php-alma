@@ -47,11 +47,11 @@ class Section
     /**
      * @var ReadingList
      */
-    protected $_list_prototpye;
+    protected $_list_prototype;
 
     public function __construct(ReadingList $list_prototype)
     {
-        $this->_list_prototpye = $list_prototype;
+        $this->_list_prototype = $list_prototype;
     }
 
     public function load(\SimpleXMLElement $xml)
@@ -63,7 +63,7 @@ class Section
     {
         if (count($this->_complete_lists) + count($this->_incomplete_lists) == 0) {
             foreach ($this->_xml->reading_lists->reading_list as $list_xml) {
-                $list = clone $this->_list_prototpye;
+                $list = clone $this->_list_prototype;
                 $list->load($list_xml);
                 if ($list->status = "Complete") {
                     $this->_complete_lists[] = $list;
@@ -124,5 +124,18 @@ class Section
                 );
                 return $this->_terms;
         }
+    }
+
+    public function __sleep()
+    {
+        // SimpleXMLElements can't be serialized. Convert to XML text.
+        $this->_xml->addAttribute('xmlns:xmlns:xsi',"http://www.w3.org/2001/XMLSchema-instance");
+        $this->_xml = $this->_xml->asXML();
+        return array('_xml', '_list_prototype');
+    }
+
+    public function __wakeup()
+    {
+        $this->_xml = new \SimpleXMLElement($this->_xml);
     }
 }
