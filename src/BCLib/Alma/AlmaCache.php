@@ -61,7 +61,7 @@ class AlmaCache
     public function containsSection($code, $section)
     {
         $key = $this->_sectionCacheKey($code, $section);
-        return $this->_cache->contains($key);
+        return $this->_contains($key);
     }
 
     public function containsUser($id)
