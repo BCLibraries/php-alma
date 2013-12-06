@@ -1,0 +1,98 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://alma.exlibris.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="LoanWebServices" targetNamespace="http://alma.exlibris.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://alma.exlibris.com/" elementFormDefault="unqualified" targetNamespace="http://alma.exlibris.com/" version="1.0">
+
+  <xs:element name="getUserLoans" type="tns:getUserLoans"></xs:element>
+
+  <xs:element name="getUserLoansResponse" type="tns:getUserLoansResponse"></xs:element>
+
+  <xs:element name="renewUserLoans" type="tns:renewUserLoans"></xs:element>
+
+  <xs:element name="renewUserLoansResponse" type="tns:renewUserLoansResponse"></xs:element>
+
+  <xs:complexType name="renewUserLoans">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="renewUserLoansResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserLoans">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserLoansResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getUserLoansResponse">
+    <wsdl:part element="tns:getUserLoansResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="renewUserLoans">
+    <wsdl:part element="tns:renewUserLoans" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="renewUserLoansResponse">
+    <wsdl:part element="tns:renewUserLoansResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserLoans">
+    <wsdl:part element="tns:getUserLoans" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="LoanWebServices">
+    <wsdl:operation name="renewUserLoans">
+      <wsdl:input message="tns:renewUserLoans" name="renewUserLoans" wsam:Action="renewUserLoans" wsaw:Action="renewUserLoans">
+    </wsdl:input>
+      <wsdl:output message="tns:renewUserLoansResponse" name="renewUserLoansResponse" wsam:Action="http://alma.exlibris.com/LoanWebServices/renewUserLoansResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserLoans">
+      <wsdl:input message="tns:getUserLoans" name="getUserLoans" wsam:Action="getUserLoans" wsaw:Action="getUserLoans">
+    </wsdl:input>
+      <wsdl:output message="tns:getUserLoansResponse" name="getUserLoansResponse" wsam:Action="http://alma.exlibris.com/LoanWebServices/getUserLoansResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoanWebServicesSoapBinding" type="tns:LoanWebServices">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="renewUserLoans">
+      <soap:operation soapAction="renewUserLoans" style="document"></soap:operation>
+      <wsdl:input name="renewUserLoans">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="renewUserLoansResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserLoans">
+      <soap:operation soapAction="getUserLoans" style="document"></soap:operation>
+      <wsdl:input name="getUserLoans">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getUserLoansResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoanWebServices">
+    <wsdl:port binding="tns:LoanWebServicesSoapBinding" name="LoanWebServicesPort">
+      <soap:address location="http://alma.exlibrisgroup.com/almaws/LoanWebServices"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

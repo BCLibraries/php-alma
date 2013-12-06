@@ -37,6 +37,11 @@ class UserInfoServices
 
     public function getUser($identifier)
     {
+        if ($this->_cache->containsUser($identifier)
+        ) {
+            return array($this->_cache->getUser($identifier));
+        }
+
         $user = false;
         $params = array('arg0' => $identifier);
         $base = $this->_soap_client->execute('getUserDetails', $params);
@@ -44,6 +49,8 @@ class UserInfoServices
             $children = $base->result->children('http://com/exlibris/urm/user_record/xmlbeans');
             $user = clone $this->_user_prototype;
             $user->load($children[0], $this->_group_codes);
+            $cache_user = clone $user;
+            $this->_cache->saveUser($cache_user);
         }
         return $user;
     }

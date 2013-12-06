@@ -9,6 +9,7 @@ namespace BCLib\Alma;
  * @property string       first_name
  * @property string       middle_name
  * @property string       last_name
+ * @property string       username
  * @property string       email
  * @property boolean      is_active
  * @property string       group_code
@@ -60,6 +61,8 @@ class User
                 return (string) $this->_xml->userDetails->middleName;
             case 'last_name':
                 return (string) $this->_xml->userDetails->lastName;
+            case 'user_name':
+                return (string) $this->_xml->userDetails->userName;
             case 'email':
                 return $this->_email();
             case 'is_active':
@@ -134,5 +137,18 @@ class User
     public function lastError()
     {
         return $this->_last_error;
+    }
+
+    public function __sleep()
+    {
+        // SimpleXMLElements can't be serialized. Convert to XML text.
+        $this->_xml->addAttribute('xmlns:xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance");
+        $this->_xml = $this->_xml->asXML();
+        return array('_xml', '_id_prototype', '_block_prototype');
+    }
+
+    public function __wakeup()
+    {
+        $this->_xml = new \SimpleXMLElement($this->_xml);
     }
 }

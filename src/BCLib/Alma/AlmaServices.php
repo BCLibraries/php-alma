@@ -34,7 +34,8 @@ class AlmaServices
         $wsdl = is_null($wsdl) ? AlmaServices::$_wsdl_directory . '/UserWebServices.xml' : $wsdl;
         $client = AlmaServices::_getSoapClient($wsdl);
         $user = new User(new Identifier($id_types), new Block());
-        return new UserInfoServices($client, $user, $group_names);
+        $cache = new AlmaCache(AlmaServices::$_cache);
+        return new UserInfoServices($client, $user, $group_names, $cache);
     }
 
     public static function courseServices($wsdl = null)

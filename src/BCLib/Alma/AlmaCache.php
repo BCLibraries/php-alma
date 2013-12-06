@@ -27,7 +27,7 @@ class AlmaCache
 
     public function saveUser(User $user, $lifetime = false)
     {
-        $key = $this->_userCacheKey($user->identifiers[0]);
+        $key = $this->_userCacheKey($user->username);
         $this->_save($key, $user, $lifetime);
     }
 
@@ -85,6 +85,6 @@ class AlmaCache
 
     protected function _userCacheKey($id)
     {
-        return $this->_prefix . ":user:" . $id;
+        return $this->_prefix . ":user:" . strtolower($id);
     }
 } 
