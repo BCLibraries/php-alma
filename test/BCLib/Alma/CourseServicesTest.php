@@ -24,7 +24,11 @@ class CourseServicesTest extends XMLLoadingTest
             ->disableOriginalConstructor()
             ->getMock();
 
-        $services = new CourseServices($soap_client, $section_proto);
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
 
         $services->getCourse('BI110.0x', 1, 12);
     }
@@ -47,7 +51,11 @@ class CourseServicesTest extends XMLLoadingTest
             ->disableOriginalConstructor()
             ->getMock();
 
-        $services = new CourseServices($soap_client, $section_proto);
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
 
         $services->getCourses('BI110', null, 1, 12);
     }
@@ -70,7 +78,11 @@ class CourseServicesTest extends XMLLoadingTest
             ->disableOriginalConstructor()
             ->getMock();
 
-        $services = new CourseServices($soap_client, $section_proto);
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
 
         $services->getCourses('BI110', '01', 1, 12);
     }
@@ -93,7 +105,11 @@ class CourseServicesTest extends XMLLoadingTest
             ->disableOriginalConstructor()
             ->getMock();
 
-        $services = new CourseServices($soap_client, $section_proto);
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
 
         $services->getCourses('BI110', '01');
     }
@@ -111,7 +127,11 @@ class CourseServicesTest extends XMLLoadingTest
             ->disableOriginalConstructor()
             ->getMock();
 
-        $services = new CourseServices($soap_client, $section_proto);
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
 
         $this->assertFalse($services->getCourses('BI110'));
         $this->assertEquals('An error has occurred', $services->lastError());
@@ -135,7 +155,11 @@ class CourseServicesTest extends XMLLoadingTest
             ->disableOriginalConstructor()
             ->getMock();
 
-        $services = new CourseServices($soap_client, $section_proto);
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
         $sections = $services->getCourse('BI110.0x');
         $this->assertEquals(3, count($sections));
         foreach ($sections as $section) {

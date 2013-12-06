@@ -2,6 +2,8 @@
 
 namespace BCLib\Alma;
 
+use BCLib\Alma\AlmaCache;
+
 class CourseServices
 {
     /**
@@ -10,10 +12,17 @@ class CourseServices
     protected $_soap_client;
     protected $_section_prototype;
 
-    public function __construct(AlmaSoapClient $client, Section $section_prototype)
+    /**
+     * @var \BClib\Alma\AlmaCache
+     */
+    protected $_cache;
+
+    public function __construct(AlmaSoapClient $client, Section $section_prototype, AlmaCache $cache = null)
     {
         $this->_soap_client = $client;
         $this->_section_prototype = $section_prototype;
+
+        $this->_cache = $cache;
     }
 
     public function getCourse($identifier, $from = 0, $to = 10)
@@ -32,6 +41,12 @@ class CourseServices
      */
     public function getCourses($course_number, $section_number = null, $from = 0, $to = 10)
     {
+        if (isset($section_number)
+            && $this->_cache->containsSection($course_number, $section_number)
+        ) {
+            return array($this->_cache->getSection($course_number, $section_number));
+        }
+
         $query = "code=$course_number";
         if (isset($section_number)) {
             $query .= " and section=$section_number";
@@ -50,6 +65,8 @@ class CourseServices
                 $section = clone $this->_section_prototype;
                 $section->load($section_xml);
                 $sections[] = $section;
+                $cache_section = clone $section;
+                $this->_cache->saveSection($cache_section);
             }
         } else {
             return false;
