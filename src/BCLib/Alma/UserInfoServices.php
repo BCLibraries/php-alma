@@ -18,6 +18,8 @@ class UserInfoServices
     protected $_group_codes;
     protected $_id_types;
 
+    protected $_cache_ttl;
+
     /**
      * @var \BClib\Alma\AlmaCache
      */
@@ -33,13 +35,14 @@ class UserInfoServices
         $this->_user_prototype = $user_prototype;
         $this->_group_codes = $group_codes;
         $this->_cache = $cache;
+        $this->_cache_ttl = 3600;
     }
 
     public function getUser($identifier)
     {
         if ($this->_cache->containsUser($identifier)
         ) {
-            return array($this->_cache->getUser($identifier));
+            return $this->_cache->getUser($identifier);
         }
 
         $user = false;
@@ -50,7 +53,7 @@ class UserInfoServices
             $user = clone $this->_user_prototype;
             $user->load($children[0], $this->_group_codes);
             $cache_user = clone $user;
-            $this->_cache->saveUser($cache_user);
+            $this->_cache->saveUser($cache_user, $this->_cache_ttl);
         }
         return $user;
     }
@@ -58,5 +61,15 @@ class UserInfoServices
     public function lastError()
     {
         return $this->_soap_client->lastError();
+    }
+
+    /**
+     * Set cache time to live.
+     *
+     * @param $seconds int time-to-live in seconds
+     */
+    public function cacheTtl($seconds)
+    {
+        $this->_cache_ttl = $seconds;
     }
 } 

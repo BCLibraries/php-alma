@@ -17,12 +17,15 @@ class CourseServices
      */
     protected $_cache;
 
+    protected $_cache_ttl;
+
     public function __construct(AlmaSoapClient $client, Section $section_prototype, AlmaCache $cache)
     {
         $this->_soap_client = $client;
         $this->_section_prototype = $section_prototype;
 
         $this->_cache = $cache;
+        $this->_cache_ttl = 3600;
     }
 
     public function getCourse($identifier, $from = 0, $to = 10)
@@ -66,7 +69,7 @@ class CourseServices
                 $section->load($section_xml);
                 $sections[] = $section;
                 $cache_section = clone $section;
-                $this->_cache->saveSection($cache_section);
+                $this->_cache->saveSection($cache_section, $this->_cache_ttl);
             }
         } else {
             return false;
@@ -77,5 +80,15 @@ class CourseServices
     public function lastError()
     {
         return $this->_soap_client->lastError();
+    }
+
+    /**
+     * Set cache time to live.
+     *
+     * @param $seconds int time-to-live in seconds
+     */
+    public function cacheTtl($seconds)
+    {
+        $this->_cache_ttl = $seconds;
     }
 }

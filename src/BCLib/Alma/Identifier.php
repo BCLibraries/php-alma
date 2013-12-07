@@ -12,6 +12,9 @@ namespace BCLib\Alma;
  */
 class Identifier
 {
+    /**
+     * @var \SimpleXMLElement
+     */
     protected $_xml;
     protected $_id_types;
 
@@ -30,11 +33,12 @@ class Identifier
         switch ($property) {
             case ('value'):
             case ('type'):
-                return (string) $this->_xml->$property;
+                $result = $this->_xml->xpath('xb:'.$property);
+                return (string) $result[0];
             case ('name'):
                 $name = '';
-                if (isset($this->_id_types[(string) $this->_xml->type])) {
-                    $name = $this->_id_types[(string) $this->_xml->type];
+                if (isset($this->_id_types[(string) $this->type])) {
+                    $name = $this->_id_types[(string) $this->type];
                 }
                 return $name;
         }

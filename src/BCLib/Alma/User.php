@@ -56,39 +56,38 @@ class User
     {
         switch ($property) {
             case 'first_name':
-                return (string) $this->_xml->userDetails->firstName;
+                $result = $this->_xml->xpath('//xb:firstName');
+                return (string) $result[0];
             case 'middle_name':
-                return (string) $this->_xml->userDetails->middleName;
+                $result = $this->_xml->xpath('//xb:middleName');
+                return (string) $result[0];
             case 'last_name':
-                return (string) $this->_xml->userDetails->lastName;
-            case 'user_name':
-                return (string) $this->_xml->userDetails->userName;
+                $result = $this->_xml->xpath('//xb:lastName');
+                return (string) $result[0];
+            case 'username':
+                $result = $this->_xml->xpath('//xb:userName');
+                return (string) $result[0];
             case 'email':
                 return $this->_email();
             case 'is_active':
-                return ((string) $this->_xml->userDetails->status === 'Active');
+                $result = $this->_xml->xpath('//xb:status');
+                return ((string) $result[0] === 'Active');
             case 'group_code':
-                return (string) $this->_xml->userDetails->userGroup;
+                $result = $this->_xml->xpath('//xb:userGroup');
+                return (string) $result[0];
             case 'group_name':
                 return $this->_groupName();
             case 'identifiers':
                 return $this->_identifiers();
             case 'blocks':
                 return $this->_blocks();
-            case 'identifiers':
-                return $this->_identifiers();
         }
     }
 
     protected function _email()
     {
-        foreach ($this->_xml->userAddressList->userEmail as $email_xml) {
-            $attributes_array = $email_xml->attributes();
-            if ($attributes_array['preferred'] == 'true') {
-                return (string) $email_xml->email[0];
-            }
-        }
-        return '';
+        $results = $this->_xml->xpath("//xb:userEmail[@preferred='true']/xb:email");
+        return $results[0];
     }
 
     protected function _groupName()
@@ -107,8 +106,7 @@ class User
     {
         if (!is_array($this->_identifiers)) {
             $this->_identifiers = array();
-            $identifiers_xml = $this->_xml->userIdentifiers->userIdentifier;
-            foreach ($identifiers_xml as $identifier_xml) {
+            foreach ($this->_xml->xpath('//xb:userIdentifier') as $identifier_xml) {
                 $id = clone $this->_id_prototype;
                 $id->load($identifier_xml);
                 $this->_identifiers[] = $id;
@@ -124,7 +122,7 @@ class User
     {
         if (!is_array($this->_blocks)) {
             $this->_blocks = array();
-            $blocks_xml = $this->_xml->userBlockList->userBlock;
+            $blocks_xml = $this->_xml->xpath('//xb:userBlock');
             foreach ($blocks_xml as $block_xml) {
                 $block = clone $this->_block_prototype;
                 $block->load($block_xml);
@@ -143,6 +141,8 @@ class User
     {
         // SimpleXMLElements can't be serialized. Convert to XML text.
         $this->_xml->addAttribute('xmlns:xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance");
+        $this->_xml->addAttribute('xmlns:xmlns:xb', "http://com/exlibris/urm/user_record/xmlbeans");
+        $this->_xml->addAttribute('xmlns:xmlns', "http://com/exlibris/urm/general/xmlbeans");
         $this->_xml = $this->_xml->asXML();
         return array('_xml', '_id_prototype', '_block_prototype');
     }
@@ -150,5 +150,6 @@ class User
     public function __wakeup()
     {
         $this->_xml = new \SimpleXMLElement($this->_xml);
+        $this->_xml->registerXPathNamespace('xb', 'http://com/exlibris/urm/user_record/xmlbeans');
     }
 }

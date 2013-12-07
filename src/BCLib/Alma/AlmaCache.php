@@ -46,7 +46,7 @@ class AlmaCache
 
     public function getUser($id)
     {
-        $key = $this->_sectionCacheKey($id);
+        $key = $this->_userCacheKey($id);
         return $this->_read($key);
     }
 

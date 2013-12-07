@@ -30,14 +30,17 @@ class Block
             case 'type':
             case 'status':
             case 'note':
-                return (string) $this->_xml->$property;
+                $result = $this->_xml->xpath(('xb:'.$property));
+                return (string) $result[0];
             case 'code':
-                return (string) $this->_xml->blockDefinitionId;
+                $result = $this->_xml->xpath(('xb:blockDefinitionId'));
+                return (string) $result[0];
             case 'creation_date':
-                return (string) $this->_xml->owneredEntity->creationDate;
+                $result = $this->_xml->xpath(('xb:owneredEntity/xb:creationDate'));
+                return (string) $result[0];
             case 'modification_date':
-                return (string) $this->_xml->owneredEntity->modificationDate;
-
+                $result = $this->_xml->xpath(('xb:owneredEntity/xb:modificationDate'));
+                return (string) $result[0];
         }
     }
 }
