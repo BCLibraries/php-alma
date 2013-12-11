@@ -185,7 +185,21 @@ class Section implements \JsonSerializable
     {
         $section = new \stdClass();
         $section->identifier = $this->identifier;
+        $section->code = $this->code;
+        $section->name = $this->name;
+        $section->faculty = $this->faculty;
+        $section->status = $this->status;
+        $section->start_date = $this->start_date;
+        $section->end_date = $this->end_date;
+        $section->hours = $this->hours;
+        $section->participants = $this->participants;
+        $section->instructor_name = $this->instructor_name;
+        $section->processing_department = $this->processing_department;
+
+        // Not adding instructor username for security reasons.
+
         $section->complete_lists = $this->complete_lists;
+        $section->incomplete_lists = $this->incomplete_lists;
         return $section;
     }
 }
