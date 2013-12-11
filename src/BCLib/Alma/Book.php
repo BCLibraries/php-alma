@@ -41,5 +41,6 @@ class Book extends Citation implements JsonSerializable
         $book->publisher = $this->publisher;
         $book->edition = $this->edition;
         $book->isbn = $this->edition;
+        return $book;
     }
 }
