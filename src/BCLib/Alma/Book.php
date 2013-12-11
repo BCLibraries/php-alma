@@ -2,6 +2,8 @@
 
 namespace BCLib\Alma;
 
+use JsonSerializable;
+
 /**
  * Class Book
  * @package BCLib\Alma
@@ -11,12 +13,12 @@ namespace BCLib\Alma;
  * @property string edition
  * @property string title
  */
-class Book extends Citation
+class Book extends Citation implements JsonSerializable
 {
     public function __get($property)
     {
-        $value =  parent::__get($property);
-        if (! is_null($value)) {
+        $value = parent::__get($property);
+        if (!is_null($value)) {
             return $value;
         }
 
@@ -31,4 +33,13 @@ class Book extends Citation
 
         throw new \Exception("$property is not a valid Book property");
     }
-} 
+
+    public function jsonSerialize()
+    {
+        $book = parent::jsonSerialize();
+        $book->title = $this->title;
+        $book->publisher = $this->publisher;
+        $book->edition = $this->edition;
+        $book->isbn = $this->edition;
+    }
+}

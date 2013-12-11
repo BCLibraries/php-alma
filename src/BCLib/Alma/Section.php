@@ -26,7 +26,7 @@ use Mockery\CountValidator\Exception;
  * @property string[]      searchable_ids
  * @property string[]      terms
  */
-class Section
+class Section implements \JsonSerializable
 {
     protected $_terms = array();
     protected $_searchable_ids = array();
@@ -179,5 +179,13 @@ class Section
     public function __wakeup()
     {
         $this->_xml = new \SimpleXMLElement($this->_xml);
+    }
+
+    public function jsonSerialize()
+    {
+        $section = new \stdClass();
+        $section->identifier = $this->identifier;
+        $section->complete_lists = $this->complete_lists;
+        return $section;
     }
 }

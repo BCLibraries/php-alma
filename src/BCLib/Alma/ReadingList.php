@@ -12,7 +12,7 @@ namespace BCLib\Alma;
  * @property string     status
  * @property Citation[] citations
  */
-class ReadingList
+class ReadingList implements \JsonSerializable
 {
     protected $_xml;
 
@@ -76,4 +76,15 @@ class ReadingList
                 return $this->_citations;
         }
     }
-} 
+
+    public function jsonSerialize()
+    {
+        $list = new \stdClass();
+        $list->identifier = $this->identifier;
+        $list->code = $this->code;
+        $list->name = $this->name;
+        $list->status = $this->status;
+        $list->citations = $this->citations;
+        return $list;
+    }
+}

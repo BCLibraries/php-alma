@@ -13,7 +13,7 @@ namespace BCLib\Alma;
  * @property string issue
  * @property string url
  */
-class Article extends Citation
+class Article extends Citation implements \JsonSerializable
 {
     public function __get($property)
     {
@@ -35,5 +35,17 @@ class Article extends Citation
         }
 
         throw new \Exception("$property is not a valid Article property");
+    }
+
+    public function jsonSerialize()
+    {
+        $article = parent::jsonSerialize();
+        $article->title = $this->title;
+        $article->article_title = $this->article_title;
+        $article->journal_title = $this->journal_title;
+        $article->volume = $this->volume;
+        $article->issue = $this->issue;
+        $article->issn = $this->issn;
+        return $article;
     }
 }

@@ -22,7 +22,7 @@ namespace BCLib\Alma;
  * @property string type
  * @property string url
  */
-abstract class Citation
+abstract class Citation implements \JsonSerializable
 {
     /**
      * @var \SimpleXMLElement
@@ -57,5 +57,25 @@ abstract class Citation
             case 'url':
                 return (string) $this->_xml->metadata->URL;
         }
+    }
+
+    public function jsonSerialize()
+    {
+        $citation = new \stdClass();
+        $citation->identifier = $this->identifier;
+        $citation->status = $this->status;
+        $citation->type = $this->type;
+        $citation->open_url = $this->open_url;
+        $citation->author = $this->author;
+        $citation->mms_id = $this->mms_id;
+        $citation->chapter = $this->chapter;
+        $citation->pages = $this->pages;
+        $citation->note = $this->note;
+        $citation->year = $this->year;
+        $citation->call_number = $this->call_number;
+        $citation->additional_person_name = $this->additional_person_name;
+        $citation->place_of_publication = $this->place_of_publication;
+        $citation->url = $this->url;
+        return $citation;
     }
 }
