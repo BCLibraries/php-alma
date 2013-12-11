@@ -2,6 +2,8 @@
 
 namespace BCLib\Alma;
 
+use Mockery\CountValidator\Exception;
+
 /**
  * Class Section
  * @package BCLib\Alma
@@ -28,6 +30,9 @@ class Section
 {
     protected $_terms = array();
     protected $_searchable_ids = array();
+
+    const SORT_TITLE = 'title';
+    const SORT_AUTHOR = 'author';
 
     /**
      * @var ReadingList[]
@@ -83,6 +88,43 @@ class Section
         }
     }
 
+    public function sectionReadings($only_active = true, $sort = Section::SORT_TITLE)
+    {
+        if (($sort != Section::SORT_TITLE) && ($sort != Section::SORT_AUTHOR)) {
+            throw new \Exception("$sort is not a valid sort type");
+        }
+
+        $readings = array();
+
+        $lists = $this->complete_lists;
+
+        if (!$only_active) {
+            $lists = $lists + $this->incomplete_lists;
+        }
+
+        foreach ($lists as $list) {
+            $readings = $readings + $list->citations;
+        }
+
+        usort(
+            $readings,
+            function ($a, $b) use ($sort) {
+
+                if ($a->$sort > $b->$sort) {
+                    return 1;
+                }
+
+                if ($a->$sort < $b->$sort) {
+                    return -1;
+                }
+
+                return 0;
+            }
+        );
+
+        return $readings;
+    }
+
     public function __get($property)
     {
         switch ($property) {
@@ -129,7 +171,7 @@ class Section
     public function __sleep()
     {
         // SimpleXMLElements can't be serialized. Convert to XML text.
-        $this->_xml->addAttribute('xmlns:xmlns:xsi',"http://www.w3.org/2001/XMLSchema-instance");
+        $this->_xml->addAttribute('xmlns:xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance");
         $this->_xml = $this->_xml->asXML();
         return array('_xml', '_list_prototype');
     }

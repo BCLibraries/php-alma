@@ -14,7 +14,7 @@ class SectionTest extends XMLLoadingTest
     public function setUp()
     {
         $list_proto = \Mockery::mock('\BCLib\Alma\ReadingList');
-        $list_proto->shouldReceive('load')->once()->withAnyArgs();
+        $list_proto->citations = array('foo', 'bar');
 
         $this->_section = new Section($list_proto);
         $this->_section->load($this->_getExampleXML('course-01.xml'));
