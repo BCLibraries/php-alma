@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.3.0",
         "phpunit/phpunit": "3.7.19",
         "mockery/mockery": "dev-master@dev",
         "doctrine/cache": "1.*"
@@ -19,7 +19,8 @@
     "suggest": {},
     "autoload": {
         "psr-0": {
-            "BCLib": "src/"
+            "BCLib": "src/",
+            "JsonSerializable": "src/"
         }
     }
 }
