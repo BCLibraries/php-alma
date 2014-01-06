@@ -195,6 +195,7 @@ class Section implements \JsonSerializable
         $section->participants = $this->participants;
         $section->instructor_name = $this->instructor_name;
         $section->processing_department = $this->processing_department;
+        $section->terms = $this->terms;
 
         // Not adding instructor username for security reasons.
 

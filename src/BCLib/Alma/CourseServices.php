@@ -58,6 +58,21 @@ class CourseServices
         return $this->_sendQuery($query, $from, $to);
     }
 
+    public function getCourseByTerm($course_number, $section_number = null, \DateTime $date, $term)
+    {
+        $result = new \stdClass();
+        $courses = $this->getCourses($course_number, $section_number);
+        if (
+            \count($courses) > 0 &&
+            $date >= new \DateTime($courses[0]->start_date) &&
+            $date <= new \DateTime($courses[0]->end_date) &&
+            in_array($term, $courses[0]->terms)
+        ) {
+            $result = $courses[0];
+        }
+        return $result;
+    }
+
     protected function _sendQuery($query, $from, $to)
     {
         $params = array('arg0' => $query, 'arg1' => $from, 'arg2' => $to);

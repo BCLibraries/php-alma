@@ -167,6 +167,104 @@ class CourseServicesTest extends XMLLoadingTest
         }
     }
 
+    public function testSearchByDateAndTermCorrectWhenExists()
+    {
+        $xml = $this->_getExampleXML('course-response-01.xml');
+
+        $soap_client = $this->getMockBuilder('\BCLib\Alma\AlmaSoapClient')
+            ->disableOriginalConstructor()
+            ->getMock();
+        $soap_client->expects($this->once())
+            ->method('execute')
+            ->will($this->returnValue($xml));
+        $soap_client->expects($this->any())
+            ->method('lastError')
+            ->will($this->returnValue(false));
+
+        $section_proto = $this->getMockBuilder('\BCLib\Alma\Section')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $section_proto->start_date = '2013-08-01Z';
+        $section_proto->end_date = '2013-12-31Z';
+        $section_proto->terms = array('Autumn');
+
+
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
+        $section = $services->getCourseByTerm('BI110', '01', new \DateTime('2013-12-28'), 'Autumn');
+        $this->assertInstanceOf('\BCLib\Alma\Section', $section);
+
+    }
+
+    public function testSearchByDateAndTermWhenDateIsWrong()
+    {
+        $xml = $this->_getExampleXML('course-response-01.xml');
+
+        $soap_client = $this->getMockBuilder('\BCLib\Alma\AlmaSoapClient')
+            ->disableOriginalConstructor()
+            ->getMock();
+        $soap_client->expects($this->once())
+            ->method('execute')
+            ->will($this->returnValue($xml));
+        $soap_client->expects($this->any())
+            ->method('lastError')
+            ->will($this->returnValue(false));
+
+        $section_proto = $this->getMockBuilder('\BCLib\Alma\Section')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $section_proto->start_date = '2013-08-01Z';
+        $section_proto->end_date = '2013-12-01Z';
+        $section_proto->terms = array('Autumn');
+
+
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
+        $section = $services->getCourseByTerm('BI110', '01', new \DateTime('2013-12-28'), 'Autumn');
+        $this->assertInstanceOf('\stdClass', $section);
+
+    }
+
+    public function testSearchByDateAndTermWhenTermIsWrong()
+    {
+        $xml = $this->_getExampleXML('course-response-01.xml');
+
+        $soap_client = $this->getMockBuilder('\BCLib\Alma\AlmaSoapClient')
+            ->disableOriginalConstructor()
+            ->getMock();
+        $soap_client->expects($this->once())
+            ->method('execute')
+            ->will($this->returnValue($xml));
+        $soap_client->expects($this->any())
+            ->method('lastError')
+            ->will($this->returnValue(false));
+
+        $section_proto = $this->getMockBuilder('\BCLib\Alma\Section')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $section_proto->start_date = '2013-08-01Z';
+        $section_proto->end_date = '2013-12-31Z';
+        $section_proto->terms = array('Autumn');
+
+
+        $cache_proto = $this->getMockBuilder('\BCLib\Alma\AlmaCache')
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $services = new CourseServices($soap_client, $section_proto, $cache_proto);
+        $section = $services->getCourseByTerm('BI110', '01', new \DateTime('2013-12-28'), 'Spring');
+        $this->assertInstanceOf('\stdClass', $section);
+    }
+
     protected function _getExampleXML($file_name)
     {
         return simplexml_load_file(__DIR__ . "/../../examples/$file_name");
