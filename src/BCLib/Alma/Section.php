@@ -186,6 +186,7 @@ class Section implements \JsonSerializable
         $section = new \stdClass();
         $section->identifier = $this->identifier;
         $section->code = $this->code;
+        $section->section = $this->section;
         $section->name = $this->name;
         $section->faculty = $this->faculty;
         $section->status = $this->status;
