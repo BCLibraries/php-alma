@@ -70,6 +70,18 @@ class AlmaCache
         return $this->_contains($key);
     }
 
+    public function clearSection($course_code, $section_number)
+    {
+        $key = $this->_sectionCacheKey($course_code, $section_number);
+        $this->_cache->delete($key);
+    }
+
+    public function clearUser($id)
+    {
+        $key = $this->_userCacheKey($id);
+        $this->_cache->delete($key);
+    }
+
     protected function _contains($key)
     {
         if (!$this->_cache instanceof Cache) {

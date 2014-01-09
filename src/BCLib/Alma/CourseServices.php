@@ -58,8 +58,12 @@ class CourseServices
         return $this->_sendQuery($query, $from, $to);
     }
 
-    public function getCourseByTerm($course_number, $section_number = null, \DateTime $date, $term)
+    public function getCourseByTerm($course_number, $section_number = null, \DateTime $date, $term, $refresh_cache = false)
     {
+        if ($refresh_cache) {
+            $this->_cache->clearSection($course_number, $section_number);
+        }
+
         $result = new \stdClass();
         $courses = $this->getCourses($course_number, $section_number);
         if (

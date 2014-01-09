@@ -38,8 +38,12 @@ class UserInfoServices
         $this->_cache_ttl = 3600;
     }
 
-    public function getUser($identifier)
+    public function getUser($identifier, $refresh_cache = false)
     {
+        if ($refresh_cache) {
+            $this->_cache->clearUser($identifier);
+        }
+
         if ($this->_cache->containsUser($identifier)
         ) {
             return $this->_cache->getUser($identifier);
