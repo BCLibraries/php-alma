@@ -38,7 +38,7 @@ class ReadingList implements \JsonSerializable
 
     protected function _lazyLoadCitations()
     {
-        if (count($this->_citations) == 0) {
+        if (count($this->_citations) == 0 && isset($this->_xml->citations)) {
             foreach ($this->_xml->citations->citation as $citation_xml) {
                 $citation = $this->_citation_factory->createCitation($citation_xml);
                 $citation->load($citation_xml);
