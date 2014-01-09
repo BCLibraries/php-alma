@@ -66,7 +66,7 @@ class Section implements \JsonSerializable
 
     protected function _lazyLoadReadingLists()
     {
-        if (count($this->_complete_lists) + count($this->_incomplete_lists) == 0) {
+        if ((count($this->_complete_lists) + count($this->_incomplete_lists) == 0) && $this->_xml->reading_lists) {
             foreach ($this->_xml->reading_lists->reading_list as $list_xml) {
                 $list = clone $this->_list_prototype;
                 $list->load($list_xml);
