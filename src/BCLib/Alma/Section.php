@@ -70,7 +70,7 @@ class Section implements \JsonSerializable
             foreach ($this->_xml->reading_lists->reading_list as $list_xml) {
                 $list = clone $this->_list_prototype;
                 $list->load($list_xml);
-                if ($list->status = "Complete") {
+                if ($list->status == "Complete") {
                     $this->_complete_lists[] = $list;
                 } else {
                     $this->_incomplete_lists[] = $list;
