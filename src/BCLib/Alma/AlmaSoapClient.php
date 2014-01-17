@@ -25,7 +25,14 @@ class AlmaSoapClient
         }
 
         $result = $this->_client->$function_name($params);
-        $base = new \SimpleXMLElement($result->SearchResults);
+
+        if (substr((string) $result->SearchResults, 0, 8) == '<OAI-PMH') {
+            $payload = '<enclosure>' . $result->SearchResults . '</enclosure>';
+        } else {
+            $payload = (string) $result->SearchResults;
+        }
+
+        $base = new \SimpleXMLElement($payload);
 
         if ((string) $base->errorsExist === 'true') {
             $this->_last_error = new \stdClass();

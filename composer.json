@@ -9,11 +9,18 @@
             "email": "benjamin.florin@bc.edu"
         }
     ],
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }
+    ],
     "require": {
         "php": ">=5.3.0",
         "phpunit/phpunit": "3.7.19",
         "mockery/mockery": "dev-master@dev",
-        "doctrine/cache": "1.*"
+        "doctrine/cache": "1.*",
+        "pear-pear.php.net/File_MARC": "*"
     },
     "require-dev": {},
     "suggest": {},
