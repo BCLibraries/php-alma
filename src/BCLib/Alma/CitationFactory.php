@@ -24,7 +24,8 @@ class CitationFactory
     {
         switch ($xml->type) {
             case 'Physical Book':
-                return clone $this->_book_prototype;
+            case 'Electronic Book':
+            return clone $this->_book_prototype;
             case 'Physical Article':
             case 'Electronic Article':
                 return clone $this->_article_prototype;
