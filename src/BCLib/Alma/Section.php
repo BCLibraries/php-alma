@@ -56,6 +56,8 @@ class Section implements \JsonSerializable
 
     public function __construct(ReadingList $list_prototype)
     {
+        $this->_complete_lists = [];
+        $this->_incomplete_lists = [];
         $this->_list_prototype = $list_prototype;
     }
 
@@ -178,6 +180,8 @@ class Section implements \JsonSerializable
 
     public function __wakeup()
     {
+        $this->_complete_lists = [];
+        $this->_incomplete_lists = [];
         $this->_xml = new \SimpleXMLElement($this->_xml);
     }
 
