@@ -2,12 +2,13 @@
 
 use BCLib\Alma\AlmaServices;
 
-require_once __DIR__ . '/vendor/autoload.php';
+// Change to the location of your autoload.php
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $soap_user = ''; // e.g. 'webservice'
 $soap_institution = ''; // e.g. '01BC_INST'
 $soap_pass = '';
-$wsdl = __DIR__ . '/UserWebServices.xml';
+$wsdl = __DIR__ . '/../wsdl-https/UserWebServices.xml';
 
 // Optional map of user group codes to names.
 $user_groups = array(
@@ -31,8 +32,12 @@ $id_types = array(
     '03' => 'NOTIS barcode number',
 );
 
-// First create the SOAP client.
-AlmaServices::initialize($soap_user, $soap_pass, $soap_institution,);
+// Use a Doctrine cache, if desired. Null sets no cache.
+// $cache = new \Doctrine\Common\Cache\ApcCache();
+$cache = null;
+
+// Initialize the AlmaServices and instantiate a
+AlmaServices::initialize($soap_user, $soap_pass, $soap_institution, $cache);
 $user_services = AlmaServices::userInfoServices($wsdl, $user_groups, $id_types);
 
 if ($user = $user_services->getUser('florinb')) {

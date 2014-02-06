@@ -22,7 +22,7 @@ class AlmaServices
         AlmaServices::$_username = $username;
         AlmaServices::$_password = $password;
         AlmaServices::$_institution = $institution;
-        AlmaServices::$_wsdl_directory = __DIR__ . '/../../../wsdl';
+        AlmaServices::$_wsdl_directory = __DIR__ . '/../../../wsdl-https';
 
         if ($cache instanceof Cache) {
             AlmaServices::$_cache = $cache;

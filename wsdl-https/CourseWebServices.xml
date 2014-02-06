@@ -1,0 +1,411 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://alma.exlibris.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CourseWebServices" targetNamespace="http://alma.exlibris.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://alma.exlibris.com/" elementFormDefault="unqualified" targetNamespace="http://alma.exlibris.com/" version="1.0">
+
+  <xs:element name="createCitation" type="tns:createCitation"></xs:element>
+
+  <xs:element name="createCitationResponse" type="tns:createCitationResponse"></xs:element>
+
+  <xs:element name="createCourse" type="tns:createCourse"></xs:element>
+
+  <xs:element name="createCourseResponse" type="tns:createCourseResponse"></xs:element>
+
+  <xs:element name="createReadinglist" type="tns:createReadinglist"></xs:element>
+
+  <xs:element name="createReadinglistResponse" type="tns:createReadinglistResponse"></xs:element>
+
+  <xs:element name="deleteCitation" type="tns:deleteCitation"></xs:element>
+
+  <xs:element name="deleteCitationResponse" type="tns:deleteCitationResponse"></xs:element>
+
+  <xs:element name="deleteCourse" type="tns:deleteCourse"></xs:element>
+
+  <xs:element name="deleteCourseResponse" type="tns:deleteCourseResponse"></xs:element>
+
+  <xs:element name="deleteReadinglist" type="tns:deleteReadinglist"></xs:element>
+
+  <xs:element name="deleteReadinglistResponse" type="tns:deleteReadinglistResponse"></xs:element>
+
+  <xs:element name="searchCourseInformation" type="tns:searchCourseInformation"></xs:element>
+
+  <xs:element name="searchCourseInformationResponse" type="tns:searchCourseInformationResponse"></xs:element>
+
+  <xs:element name="updateCitation" type="tns:updateCitation"></xs:element>
+
+  <xs:element name="updateCitationResponse" type="tns:updateCitationResponse"></xs:element>
+
+  <xs:element name="updateCourse" type="tns:updateCourse"></xs:element>
+
+  <xs:element name="updateCourseResponse" type="tns:updateCourseResponse"></xs:element>
+
+  <xs:element name="updateReadinglist" type="tns:updateReadinglist"></xs:element>
+
+  <xs:element name="updateReadinglistResponse" type="tns:updateReadinglistResponse"></xs:element>
+
+  <xs:complexType name="deleteCitation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteCitationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchCourseInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchCourseInformationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateReadinglist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateReadinglistResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteCourse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteCourseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createCitation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createCitationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateCourse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateCourseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createReadinglist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createReadinglistResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateCitation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateCitationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteReadinglist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteReadinglistResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createCourse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createCourseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchResults" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="deleteCourseResponse">
+    <wsdl:part element="tns:deleteCourseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCitation">
+    <wsdl:part element="tns:createCitation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCourse">
+    <wsdl:part element="tns:updateCourse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createReadinglistResponse">
+    <wsdl:part element="tns:createReadinglistResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCourseResponse">
+    <wsdl:part element="tns:updateCourseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCourse">
+    <wsdl:part element="tns:createCourse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCitation">
+    <wsdl:part element="tns:updateCitation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteReadinglist">
+    <wsdl:part element="tns:deleteReadinglist" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteCourse">
+    <wsdl:part element="tns:deleteCourse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteCitationResponse">
+    <wsdl:part element="tns:deleteCitationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createReadinglist">
+    <wsdl:part element="tns:createReadinglist" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCitationResponse">
+    <wsdl:part element="tns:updateCitationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCourseResponse">
+    <wsdl:part element="tns:createCourseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCitationResponse">
+    <wsdl:part element="tns:createCitationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchCourseInformation">
+    <wsdl:part element="tns:searchCourseInformation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateReadinglistResponse">
+    <wsdl:part element="tns:updateReadinglistResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteCitation">
+    <wsdl:part element="tns:deleteCitation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateReadinglist">
+    <wsdl:part element="tns:updateReadinglist" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchCourseInformationResponse">
+    <wsdl:part element="tns:searchCourseInformationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteReadinglistResponse">
+    <wsdl:part element="tns:deleteReadinglistResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CourseWebServices">
+    <wsdl:operation name="deleteCitation">
+      <wsdl:input message="tns:deleteCitation" name="deleteCitation" wsam:Action="deleteCitation" wsaw:Action="deleteCitation">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteCitationResponse" name="deleteCitationResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/deleteCitationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchCourseInformation">
+      <wsdl:input message="tns:searchCourseInformation" name="searchCourseInformation" wsam:Action="searchCourseInformation" wsaw:Action="searchCourseInformation">
+    </wsdl:input>
+      <wsdl:output message="tns:searchCourseInformationResponse" name="searchCourseInformationResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/searchCourseInformationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReadinglist">
+      <wsdl:input message="tns:updateReadinglist" name="updateReadinglist" wsam:Action="updateReadinglist" wsaw:Action="updateReadinglist">
+    </wsdl:input>
+      <wsdl:output message="tns:updateReadinglistResponse" name="updateReadinglistResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/updateReadinglistResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCourse">
+      <wsdl:input message="tns:deleteCourse" name="deleteCourse" wsam:Action="deleteCourse" wsaw:Action="deleteCourse">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteCourseResponse" name="deleteCourseResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/deleteCourseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCitation">
+      <wsdl:input message="tns:createCitation" name="createCitation" wsam:Action="createCitation" wsaw:Action="createCitation">
+    </wsdl:input>
+      <wsdl:output message="tns:createCitationResponse" name="createCitationResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/createCitationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCourse">
+      <wsdl:input message="tns:updateCourse" name="updateCourse" wsam:Action="updateCourse" wsaw:Action="updateCourse">
+    </wsdl:input>
+      <wsdl:output message="tns:updateCourseResponse" name="updateCourseResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/updateCourseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createReadinglist">
+      <wsdl:input message="tns:createReadinglist" name="createReadinglist" wsam:Action="createReadinglist" wsaw:Action="createReadinglist">
+    </wsdl:input>
+      <wsdl:output message="tns:createReadinglistResponse" name="createReadinglistResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/createReadinglistResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCitation">
+      <wsdl:input message="tns:updateCitation" name="updateCitation" wsam:Action="updateCitation" wsaw:Action="updateCitation">
+    </wsdl:input>
+      <wsdl:output message="tns:updateCitationResponse" name="updateCitationResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/updateCitationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteReadinglist">
+      <wsdl:input message="tns:deleteReadinglist" name="deleteReadinglist" wsam:Action="deleteReadinglist" wsaw:Action="deleteReadinglist">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteReadinglistResponse" name="deleteReadinglistResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/deleteReadinglistResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCourse">
+      <wsdl:input message="tns:createCourse" name="createCourse" wsam:Action="createCourse" wsaw:Action="createCourse">
+    </wsdl:input>
+      <wsdl:output message="tns:createCourseResponse" name="createCourseResponse" wsam:Action="http://alma.exlibris.com/CourseWebServices/createCourseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CourseWebServicesSoapBinding" type="tns:CourseWebServices">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="deleteCitation">
+      <soap:operation soapAction="deleteCitation" style="document"></soap:operation>
+      <wsdl:input name="deleteCitation">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="deleteCitationResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchCourseInformation">
+      <soap:operation soapAction="searchCourseInformation" style="document"></soap:operation>
+      <wsdl:input name="searchCourseInformation">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="searchCourseInformationResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReadinglist">
+      <soap:operation soapAction="updateReadinglist" style="document"></soap:operation>
+      <wsdl:input name="updateReadinglist">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updateReadinglistResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCitation">
+      <soap:operation soapAction="createCitation" style="document"></soap:operation>
+      <wsdl:input name="createCitation">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="createCitationResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCourse">
+      <soap:operation soapAction="deleteCourse" style="document"></soap:operation>
+      <wsdl:input name="deleteCourse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="deleteCourseResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCourse">
+      <soap:operation soapAction="updateCourse" style="document"></soap:operation>
+      <wsdl:input name="updateCourse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updateCourseResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createReadinglist">
+      <soap:operation soapAction="createReadinglist" style="document"></soap:operation>
+      <wsdl:input name="createReadinglist">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="createReadinglistResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCitation">
+      <soap:operation soapAction="updateCitation" style="document"></soap:operation>
+      <wsdl:input name="updateCitation">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updateCitationResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteReadinglist">
+      <soap:operation soapAction="deleteReadinglist" style="document"></soap:operation>
+      <wsdl:input name="deleteReadinglist">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="deleteReadinglistResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCourse">
+      <soap:operation soapAction="createCourse" style="document"></soap:operation>
+      <wsdl:input name="createCourse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="createCourseResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CourseWebServices">
+    <wsdl:port binding="tns:CourseWebServicesSoapBinding" name="CourseWebServicesPort">
+      <soap:address location="https://alma.exlibrisgroup.com/almaws/CourseWebServices"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
