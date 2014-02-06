@@ -59,6 +59,16 @@ class SoapBibRecord implements \JsonSerializable
         return $this->_holdings;
     }
 
+    /**
+     * @param $field_num
+     *
+     * @return array|\File_MARC_List
+     */
+    function getMARCField($field_num)
+    {
+        return $this->_marc->getFields($field_num);
+    }
+
     function jsonSerialize()
     {
         $bib_record = new \stdClass();
