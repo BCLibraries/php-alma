@@ -68,7 +68,10 @@ class Section implements \JsonSerializable
 
     protected function _lazyLoadReadingLists()
     {
-        if ((count($this->_complete_lists) + count($this->_incomplete_lists) == 0) && isset($this->_xml->reading_lists)) {
+        if ((count($this->_complete_lists) + count(
+                    $this->_incomplete_lists
+                ) == 0) && isset($this->_xml->reading_lists)
+        ) {
             foreach ($this->_xml->reading_lists->reading_list as $list_xml) {
                 $list = clone $this->_list_prototype;
                 $list->load($list_xml);
@@ -125,6 +128,14 @@ class Section implements \JsonSerializable
         );
 
         return $readings;
+    }
+
+    public function isOffered(\DateTime $date, $term)
+    {
+        return
+            $date >= new \DateTime($this->start_date) &&
+            $date <= new \DateTime($this->end_date) &&
+            in_array($term, $this->terms);
     }
 
     public function __get($property)
