@@ -14,7 +14,7 @@
         "phpunit/phpunit": "3.7.19",
         "mockery/mockery": "dev-master@dev",
         "doctrine/cache": "1.*",
-        "guzzle/guzzle": "~3.7"
+        "guzzlehttp/guzzle": "v3.8.1"
     },
     "require-dev": {},
     "suggest": {},

@@ -22,16 +22,16 @@ class AlmaCache
     public function saveSection(Section $section, $lifetime = false)
     {
         $key = $this->_sectionCacheKey($section->code, $section->section);
-        $this->_save($key, $section, $lifetime);
+        $this->save($key, $section, $lifetime);
     }
 
     public function saveUser(User $user, $lifetime = false)
     {
         $key = $this->_userCacheKey($user->username);
-        $this->_save($key, $user, $lifetime);
+        $this->save($key, $user, $lifetime);
     }
 
-    public function _save($key, $value, $lifetime)
+    public function save($key, $value, $lifetime)
     {
         if ($this->_cache instanceof Cache) {
             $this->_cache->save($key, $value, $lifetime);
@@ -41,16 +41,16 @@ class AlmaCache
     public function getSection($code, $section)
     {
         $key = $this->_sectionCacheKey($code, $section);
-        return $this->_read($key);
+        return $this->read($key);
     }
 
     public function getUser($id)
     {
         $key = $this->_userCacheKey($id);
-        return $this->_read($key);
+        return $this->read($key);
     }
 
-    protected function _read($key)
+    public function read($key)
     {
         if (!$this->_cache instanceof Cache) {
             return null;
@@ -61,13 +61,13 @@ class AlmaCache
     public function containsSection($code, $section)
     {
         $key = $this->_sectionCacheKey($code, $section);
-        return $this->_contains($key);
+        return $this->contains($key);
     }
 
     public function containsUser($id)
     {
         $key = $this->_userCacheKey($id);
-        return $this->_contains($key);
+        return $this->contains($key);
     }
 
     public function clearSection($course_code, $section_number)
@@ -82,7 +82,7 @@ class AlmaCache
         $this->_cache->delete($key);
     }
 
-    protected function _contains($key)
+    public function contains($key)
     {
         if (!$this->_cache instanceof Cache) {
             return false;
@@ -98,5 +98,15 @@ class AlmaCache
     protected function _userCacheKey($id)
     {
         return $this->_prefix . ":user:" . strtolower($id);
+    }
+
+    public function bibCacheKey($mms)
+    {
+        return $this->_prefix . ":bib:" . strtolower($mms);
+    }
+
+    public function holdingsListKey($mms)
+    {
+        return $this->_prefix . ":holdings-list:" . strtolower($mms);
     }
 } 
