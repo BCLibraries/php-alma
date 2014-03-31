@@ -100,13 +100,9 @@ class AlmaCache
         return $this->_prefix . ":user:" . strtolower($id);
     }
 
-    public function bibCacheKey($mms)
+    public function key($type, $id)
     {
-        return $this->_prefix . ":bib:" . strtolower($mms);
+        return $this->_prefix . ':' . $type . ':' . $id;
     }
 
-    public function holdingsListKey($mms)
-    {
-        return $this->_prefix . ":holdings-list:" . strtolower($mms);
-    }
 } 
