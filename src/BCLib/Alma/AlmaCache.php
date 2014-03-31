@@ -31,6 +31,12 @@ class AlmaCache
         $this->save($key, $user, $lifetime);
     }
 
+    public function saveBibRecord(SoapBibRecord $record, $lifetime = false)
+    {
+        $key = $this->_bibRecordCacheKey($record->mms);
+        $this->save($key, $record, $lifetime);
+    }
+
     public function save($key, $value, $lifetime)
     {
         if ($this->_cache instanceof Cache) {
@@ -47,6 +53,12 @@ class AlmaCache
     public function getUser($id)
     {
         $key = $this->_userCacheKey($id);
+        return $this->read($key);
+    }
+
+   public function getBibRecord($mms)
+    {
+        $key = $this->_bibRecordCacheKey($mms);
         return $this->read($key);
     }
 
@@ -67,6 +79,12 @@ class AlmaCache
     public function containsUser($id)
     {
         $key = $this->_userCacheKey($id);
+        return $this->contains($key);
+    }
+
+    public function containsBibRecord($mms)
+    {
+        $key = $this->_bibRecordCacheKey($mms);
         return $this->contains($key);
     }
 
@@ -100,9 +118,13 @@ class AlmaCache
         return $this->_prefix . ":user:" . strtolower($id);
     }
 
+    protected function _bibRecordCacheKey($mms)
+    {
+        return $this->_prefix . ":bib_record:" . $mms;
+    }
+
     public function key($type, $id)
     {
         return $this->_prefix . ':' . $type . ':' . $id;
     }
-
-} 
+}

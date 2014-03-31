@@ -1,6 +1,6 @@
 ## php-alma
 
-Utilities for interacting with Alma Web Services in PHP. Currently read access is provided for two SOAP service: User Info services and Course services. 
+Utilities for interacting with Alma Web Services in PHP. Currently read access is provided for three SOAP service: User Info services, Course services, and Holdings services. 
 
 ### Installation
 
@@ -21,13 +21,20 @@ Utilities for interacting with Alma Web Services in PHP. Currently read access i
 		    {
 		        "type": "vcs",
 		        "url": "https://github.com/BCLibraries/php-alma"
-		    }
+		    },
+		    {
+            "type": "pear",
+            "url": "http://pear.php.net"
+            }
 		  ],
 		    "require": {
-		            "bclibraries/php-alma" : "master"
-		    },
+		            "bclibraries/php-alma" : "master",
+		            "pear-pear/File_MARC": "*"
+		    }, 
 		    "minimum-stability": "dev"
 		 }
+   
+   Transitive composer installs don't work with PEAR repositories, so you'll have to specifically include the PEAR install in your `composer.json`.
     
 3. Install using `composer.phar`:
 
@@ -112,6 +119,36 @@ if ($courses = $course_services->getCourses('AD100', '03', 0, 10)) {
     }
 } else {
     echo $course_services->lastError()->message;
+}
+```
+
+### Holdings
+
+To load holdings for an or set of items:
+
+```php
+$service = Alma\AlmaServices::holdingsServices();
+
+// Pass in an array of MMS IDs.
+$bib_records = $service->getHoldings(
+    array('99131822450001021', '99106869560001021')
+);
+
+foreach ($bib_records as $bib_record) {
+    echo $bib_record->mms . "\n";
+    
+    // Returns a list of PEAR File_MARC_Field objects.
+    foreach ($bib_record->getMARCField('245') as $marc_field) {
+        echo $marc_field->getSubfield('a')->getData() . "\n";
+    }
+
+    foreach ($bib_record->holdings as $holding) {
+        echo $holding->availability . "\n";
+        echo $holding->call_number . "\n";
+        echo $holding->institution . "\n";
+        echo $holding->library . "\n";
+        echo $holding->location . "\n";
+    }
 }
 ```
 
