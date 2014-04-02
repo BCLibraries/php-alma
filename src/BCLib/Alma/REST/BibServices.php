@@ -3,6 +3,7 @@
 namespace BCLib\Alma\REST;
 
 use BCLib\Alma\AlmaCache;
+use Doctrine\Common\Cache\Cache;
 
 class BibServices
 {
@@ -11,9 +12,28 @@ class BibServices
      */
     private $_client;
 
-    public function __construct(Client $client)
+    /**
+     * @var AlmaCache
+     */
+    private $_cache;
+
+    public static function buildBibServices(
+        $alma_api_key,
+        $base_url,
+        Cache $cache = null,
+        $api_version = 'v1'
+
+    ) {
+        $alma_cache = new AlmaCache($cache);
+        $guzzle = new \Guzzle\Http\Client();
+        $client = new Client($guzzle, $alma_api_key, $base_url, $api_version);
+        return new BibServices($client, $alma_cache);
+    }
+
+    public function __construct($client, AlmaCache $cache)
     {
         $this->_client = $client;
+        $this->_cache = $cache;
     }
 
     /**
@@ -25,7 +45,7 @@ class BibServices
     public function listHoldings($mms, $cache_ttl = 600)
     {
         $url = 'bibs/' . $mms . '/holdings/';
-        return $this->_client->load(new HoldingList(), $url, $mms, $cache_ttl);
+        return $this->_load(new HoldingList(), $url, $mms, $cache_ttl);
     }
 
     /**
@@ -38,7 +58,23 @@ class BibServices
     public function listItems($holdings_id, $mms, $cache_ttl = 60)
     {
         $url = 'bibs/' . $mms . '/holdings/' . $holdings_id . '/items';
-        return $this->_client->load(new ItemsList(), $url, $holdings_id, $cache_ttl);
+        $item_list = $this->_load(new ItemsList(), $url, $holdings_id, $cache_ttl);
+        foreach ($item_list as $item) {
+            $item_cache_key = $this->_cache->key(get_class($item), $item->pid);
+            $this->_cache->save($item_cache_key, $item, $cache_ttl);
+        }
+        return $item_list;
+    }
+
+    protected function _load(Loadable $container, $url, $id, $cache_ttl)
+    {
+        $cache_key = $this->_cache->key(get_class($container), $id);
+        if ($this->_cache->contains($cache_key)) {
+            return $this->_cache->read($cache_key);
+        }
+        $this->_client->load($container, $url);
+        $this->_cache->save($cache_key, $container, $cache_ttl);
+        return $container;
     }
 
 }
