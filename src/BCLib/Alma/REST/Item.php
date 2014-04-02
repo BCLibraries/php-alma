@@ -21,7 +21,12 @@ class Item
     public $location_desc;
     public $enumeration;
 
-    public $holding_data;
+    public $holding_link;
+    public $holding_id;
+    public $temp_library_value;
+    public $temp_library_desc;
+    public $temp_location_value;
+    public $temp_location_desc;
 
     /**
      * @var \BCLib\Alma\REST\Bib
@@ -44,5 +49,14 @@ class Item
         $this->location_desc = $item_data->location->desc;
         $this->location_value = $item_data->location->value;
         $this->enumeration = $item_data->enumeration_a;
+
+        $holding_data = $item_json->holding_data;
+
+        $this->holding_id = $holding_data->holding_id;
+        $this->holding_link = $holding_data->link;
+        $this->temp_library_desc = $holding_data->temp_library->desc;
+        $this->temp_library_value = $holding_data->temp_library->value;
+        $this->temp_location_desc = $holding_data->temp_library->desc;
+        $this->temp_location_value = $holding_data->temp_library->value;
     }
 }
