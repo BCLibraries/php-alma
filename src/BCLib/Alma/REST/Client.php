@@ -3,6 +3,8 @@
 namespace BCLib\Alma\REST;
 
 use BCLib\Alma\AlmaCache;
+use BCLib\Alma\REST\Exceptions\BadRequestException;
+use Guzzle\Http\Exception\BadResponseException;
 
 class Client
 {
@@ -35,14 +37,20 @@ class Client
     public function _fetch($url)
     {
         $query_string = 'apikey=' . $this->_key;
-        $response = $this->_client->get(
-            "$url.json?$query_string",
-            array(
-                'headers' => array(
-                    'Accept' => 'application/json'
+
+        try {
+            $response = $this->_client->get(
+                "$url.json?$query_string",
+                array(
+                    'headers' => array(
+                        'Accept' => 'application/json'
+                    )
                 )
-            )
-        )->send()->getBody(true);
+            )->send()->getBody(true);
+        } catch (BadResponseException $e) {
+            throw new BadRequestException($e->getResponse());
+        };
+
         return json_decode($response);
     }
 
