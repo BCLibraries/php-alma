@@ -55,6 +55,19 @@ class AlmaServices
         return new HoldingsService($client, $holding_prototype, $cache);
     }
 
+    public static function bibServices(
+        $alma_api_key,
+        $base_url,
+        Cache $cache = null,
+        $api_version = 'v1'
+
+    ) {
+        $alma_cache = new AlmaCache($cache);
+        $guzzle = new \Guzzle\Http\Client();
+        $client = new REST\Client($guzzle, $alma_api_key, $base_url, $api_version);
+        return new REST\BibServices($client, $alma_cache);
+    }
+
     protected static function _getSoapClient($default_wsdl, $user_wsdl = null)
     {
         $user_wsdl = is_null($user_wsdl) ? AlmaServices::$_wsdl_directory . "/$default_wsdl" : $user_wsdl;

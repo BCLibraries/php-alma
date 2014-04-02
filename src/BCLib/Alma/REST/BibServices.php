@@ -17,19 +17,6 @@ class BibServices
      */
     private $_cache;
 
-    public static function buildBibServices(
-        $alma_api_key,
-        $base_url,
-        Cache $cache = null,
-        $api_version = 'v1'
-
-    ) {
-        $alma_cache = new AlmaCache($cache);
-        $guzzle = new \Guzzle\Http\Client();
-        $client = new Client($guzzle, $alma_api_key, $base_url, $api_version);
-        return new BibServices($client, $alma_cache);
-    }
-
     public function __construct($client, AlmaCache $cache)
     {
         $this->_client = $client;
