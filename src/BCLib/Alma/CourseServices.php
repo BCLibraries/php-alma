@@ -44,10 +44,10 @@ class CourseServices
      */
     public function getCourses($course_number, $section_number = null, $from = 0, $to = 10)
     {
-        if (isset($section_number)
-            && $this->_cache->containsSection($course_number, $section_number)
-        ) {
-            return array($this->_cache->getSection($course_number, $section_number));
+        $key = $this->_courseCacheKey($course_number, $section_number);
+
+        if (isset($section_number) && $this->_cache->contains($key)) {
+            return array($this->_cache->read($key));
         }
 
         $query = "code=$course_number";
@@ -58,10 +58,16 @@ class CourseServices
         return $this->_sendQuery($query, $from, $to);
     }
 
-    public function getCourseByTerm($course_number, $section_number = null, \DateTime $date, $term, $refresh_cache = false)
-    {
+    public function getCourseByTerm(
+        $course_number,
+        $section_number = null,
+        \DateTime $date,
+        $term,
+        $refresh_cache = false
+    ) {
         if ($refresh_cache) {
-            $this->_cache->clearSection($course_number, $section_number);
+            $key = $this->_courseCacheKey($course_number, $section_number);
+            $this->_cache->clear($key);
         }
 
         $result = new \stdClass();
@@ -88,7 +94,7 @@ class CourseServices
                 $section->load($section_xml);
                 $sections[] = $section;
                 $cache_section = clone $section;
-                $this->_cache->saveSection($cache_section, $this->_cache_ttl);
+                $this->_cache->save($section->code . ":" . $section->section, $cache_section, $this->_cache_ttl);
             }
         } else {
             return false;
@@ -109,5 +115,10 @@ class CourseServices
     public function cacheTtl($seconds)
     {
         $this->_cache_ttl = $seconds;
+    }
+
+    protected function _courseCacheKey($course_number, $section_number)
+    {
+        return $this->_cache->key(get_class($this->_section_prototype), "$course_number:$section_number");
     }
 }

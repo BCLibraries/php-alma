@@ -40,13 +40,15 @@ class UserInfoServices
 
     public function getUser($identifier, $refresh_cache = false)
     {
+        $key = $this->_cache->key(get_class($this->_user_prototype), $identifier);
+
         if ($refresh_cache) {
-            $this->_cache->clearUser($identifier);
+            $this->_cache->clear($key);
         }
 
-        if ($this->_cache->containsUser($identifier)
+        if ($this->_cache->contains($key)
         ) {
-            return $this->_cache->getUser($identifier);
+            return $this->_cache->read($key);
         }
 
         $user = false;
@@ -57,7 +59,7 @@ class UserInfoServices
             $user = clone $this->_user_prototype;
             $user->load($children[0], $this->_group_codes);
             $cache_user = clone $user;
-            $this->_cache->saveUser($cache_user, $this->_cache_ttl);
+            $this->_cache->save($identifier, $cache_user, $this->_cache_ttl);
         }
         return $user;
     }

@@ -47,8 +47,7 @@ class BibServices
         $url = 'bibs/' . $mms . '/holdings/' . $holdings_id . '/items';
         $item_list = $this->_load(new ItemsList(), $url, $holdings_id, $cache_ttl);
         foreach ($item_list as $item) {
-            $item_cache_key = $this->_cache->key(get_class($item), $item->pid);
-            $this->_cache->save($item_cache_key, $item, $cache_ttl);
+            $this->_cache->save($item->pid, $item, $cache_ttl);
         }
         return $item_list;
     }
@@ -60,7 +59,7 @@ class BibServices
             return $this->_cache->read($cache_key);
         }
         $this->_client->load($container, $url);
-        $this->_cache->save($cache_key, $container, $cache_ttl);
+        $this->_cache->save($id, $container, $cache_ttl);
         return $container;
     }
 
