@@ -70,13 +70,17 @@ class CourseServices
             $this->_cache->clear($key);
         }
 
+        if (! is_array($term)) {
+            $term = array($term);
+        }
+
         $result = new \stdClass();
         $courses = $this->getCourses($course_number, $section_number);
         if (
             \count($courses) > 0 &&
             $date >= new \DateTime($courses[0]->start_date) &&
             $date <= new \DateTime($courses[0]->end_date) &&
-            in_array($term, $courses[0]->terms)
+            count(array_intersect($term, $courses[0]->terms)) > 0
         ) {
             $result = $courses[0];
         }
