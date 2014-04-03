@@ -11,8 +11,8 @@
     ],
     "repositories": [
         {
-            "type": "pear",
-            "url": "http://pear.php.net"
+            "url": "https://github.com/pear/File_MARC.git",
+            "type": "git"
         }
     ],
     "require": {
@@ -20,9 +20,12 @@
         "phpunit/phpunit": "3.7.19",
         "mockery/mockery": "dev-master@dev",
         "doctrine/cache": "1.*",
-        "pear-pear.php.net/File_MARC": "*",
+        "pear/file_marc": "dev-master",
+        "pear/pear_exception" : "@dev",
         "guzzlehttp/guzzle": "v3.8.1"
     },
+    "prefer-stable": true,
+    "minimum-stability": "stable",
     "require-dev": {},
     "suggest": {},
     "autoload": {
