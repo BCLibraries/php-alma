@@ -46,7 +46,7 @@ class BibServices
     {
         $url = 'bibs/' . $mms . '/holdings/' . $holdings_id . '/items';
         $item_list = $this->_load(new ItemsList(), $url, $holdings_id, $cache_ttl);
-        foreach ($item_list as $item) {
+        foreach ($item_list->items as $item) {
             $this->_cache->save($item->pid, $item, $cache_ttl);
         }
         return $item_list;
