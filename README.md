@@ -14,25 +14,25 @@ Utilities for interacting with Alma Web Services in PHP. Currently read access i
 
 
 		{
-		  "name":"your-org/your-project",
-		  "description": "Describe your project",
-		  "license":"MIT",
-		  "repositories": [
-		    {
-		        "type": "vcs",
-		        "url": "https://github.com/BCLibraries/php-alma"
-		    },
-		    {
-            "type": "pear",
-            "url": "http://pear.php.net"
-            }
-		  ],
-		    "require": {
-		            "bclibraries/php-alma" : "master",
-		            "pear-pear/File_MARC": "*"
-		    }, 
-		    "minimum-stability": "dev"
-		 }
+            "name": "your-org/your-project",
+            "description": "Describe your project",
+            "license": "MIT",
+            "repositories": [
+                {
+                    "type": "vcs",
+                    "url": "https://github.com/BCLibraries/php-alma"
+                },
+                {
+                    "url": "https://github.com/pear/File_MARC.git",
+                    "type": "git"
+                }
+            ],
+            "require": {
+                "bclibraries/php-alma": "master",
+                "pear/File_MARC": "*"
+            },
+            "minimum-stability": "dev"
+        }
    
    Transitive composer installs don't work with PEAR repositories, so you'll have to specifically include the PEAR install in your `composer.json`.
     
