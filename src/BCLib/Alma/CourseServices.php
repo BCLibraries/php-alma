@@ -2,8 +2,6 @@
 
 namespace BCLib\Alma;
 
-use BCLib\Alma\AlmaCache;
-
 class CourseServices
 {
     /**
@@ -70,7 +68,7 @@ class CourseServices
             $this->_cache->clear($key);
         }
 
-        if (! is_array($term)) {
+        if (!is_array($term)) {
             $term = array($term);
         }
 
@@ -109,6 +107,11 @@ class CourseServices
     public function lastError()
     {
         return $this->_soap_client->lastError();
+    }
+
+    public function clearCache($course_number, $section_number)
+    {
+        $this->_cache->clear($this->_courseCacheKey($course_number, $section_number));
     }
 
     /**
