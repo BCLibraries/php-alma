@@ -2,7 +2,6 @@
 
 namespace BCLib\Alma\REST;
 
-use BCLib\Alma\AlmaCache;
 use BCLib\Alma\REST\Exceptions\BadRequestException;
 use Guzzle\Http\Exception\BadResponseException;
 

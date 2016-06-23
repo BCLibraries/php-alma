@@ -7,6 +7,10 @@ class AlmaSoapClient
     private $_user;
     private $_password;
     private $_wsdl;
+
+    /**
+     * @var \SoapClient
+     */
     private $_client;
 
     private $_last_error = false;

@@ -3,7 +3,6 @@
 namespace BCLib\Alma\REST;
 
 use BCLib\Alma\AlmaCache;
-use Doctrine\Common\Cache\Cache;
 
 class BibServices
 {
