@@ -22,7 +22,7 @@
         "doctrine/cache": "1.*",
         "pear/file_marc": "dev-master",
         "pear/pear_exception" : "@dev",
-        "guzzlehttp/guzzle": "v3.8.1"
+        "guzzlehttp/guzzle": "^3.8.1"
     },
     "prefer-stable": true,
     "minimum-stability": "stable",
