@@ -2,8 +2,6 @@
 
 namespace BCLib\Alma;
 
-use JsonSerializable;
-
 /**
  * Class Book
  * @package BCLib\Alma
@@ -13,7 +11,7 @@ use JsonSerializable;
  * @property string edition
  * @property string title
  */
-class Book extends Citation implements JsonSerializable
+class Book extends Citation
 {
     public function __get($property)
     {

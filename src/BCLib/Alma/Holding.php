@@ -12,7 +12,7 @@ namespace BCLib\Alma;
  * @property string call_number
  * @property string availability
  */
-class Holding implements \JsonSerializable
+class Holding
 {
     /**
      * @var \File_MARC_Data_Field

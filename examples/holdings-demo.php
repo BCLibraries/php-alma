@@ -10,7 +10,7 @@ $soap_pass = ''; // e.g. my_password
 
 // Use a Doctrine cache, if desired. Null sets no cache.
 // $cache = new \Doctrine\Common\Cache\ApcCache();
-$cache = null;se
+$cache = null;
 
 Alma\AlmaServices::initialize($soap_user, $soap_pass, $soap_institution, $cache);
 $service = Alma\AlmaServices::holdingsServices();

@@ -9,7 +9,7 @@ namespace BCLib\Alma;
  * @property Holding[] holdings
  * @property string    mms
  */
-class SoapBibRecord implements \JsonSerializable
+class SoapBibRecord
 {
     /**
      * @var \File_MARC_Record

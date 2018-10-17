@@ -13,7 +13,7 @@ namespace BCLib\Alma;
  * @property string issue
  * @property string url
  */
-class Article extends Citation implements \JsonSerializable
+class Article extends Citation
 {
     public function __get($property)
     {

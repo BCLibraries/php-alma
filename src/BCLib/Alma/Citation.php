@@ -22,7 +22,7 @@ namespace BCLib\Alma;
  * @property string type
  * @property string url
  */
-abstract class Citation implements \JsonSerializable
+abstract class Citation
 {
     /**
      * @var \SimpleXMLElement

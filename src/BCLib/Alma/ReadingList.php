@@ -12,7 +12,7 @@ namespace BCLib\Alma;
  * @property string     status
  * @property Citation[] citations
  */
-class ReadingList implements \JsonSerializable
+class ReadingList
 {
     protected $_xml;
 

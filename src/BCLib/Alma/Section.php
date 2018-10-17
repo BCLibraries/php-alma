@@ -26,7 +26,7 @@ use Mockery\CountValidator\Exception;
  * @property string[]      searchable_ids
  * @property string[]      terms
  */
-class Section implements \JsonSerializable
+class Section
 {
     protected $_terms = [];
     protected $_searchable_ids = [];
