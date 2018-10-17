@@ -1,5 +1,11 @@
 ## php-alma
 
+### DEPRECATED
+
+This package uses the **deprecated** Alma SOAP API and has very limited support. For new projects, use the [php-alma-client](https://github.com/scriptotek/php-alma-client) package.
+
+### Description
+
 Utilities for interacting with Alma Web Services in PHP. Currently read access is provided for three SOAP service: User Info services, Course services, and Holdings services. 
 
 ### Installation
@@ -124,31 +130,29 @@ if ($courses = $course_services->getCourses('AD100', '03', 0, 10)) {
 
 ### Holdings
 
-To load holdings for an or set of items:
+Holdings uses REST services.
 
 ```php
-$service = Alma\AlmaServices::holdingsServices();
+// Your Alma apikey.
+$apikey = 'YOURAPIKEY';
 
-// Pass in an array of MMS IDs.
-$bib_records = $service->getHoldings(
-    array('99131822450001021', '99106869560001021')
-);
+// The base URL of your Alma install.
+$base_url = 'https://api-na.hosted.exlibrisgroup.com/almaws/';
 
-foreach ($bib_records as $bib_record) {
-    echo $bib_record->mms . "\n";
-    
-    // Returns a list of PEAR File_MARC_Field objects.
-    foreach ($bib_record->getMARCField('245') as $marc_field) {
-        echo $marc_field->getSubfield('a')->getData() . "\n";
-    }
+$client = \BCLib\Alma\AlmaServices::bibServices($apikey, $base_url);
 
-    foreach ($bib_record->holdings as $holding) {
-        echo $holding->availability . "\n";
-        echo $holding->call_number . "\n";
-        echo $holding->institution . "\n";
-        echo $holding->library . "\n";
-        echo $holding->location . "\n";
-    }
+// Use a valid MMS ID from your collection.
+$mms = '99103130010001021';
+
+$holding_result = $client->listHoldings($mms);
+foreach ($holding_result->holdings as $holding) {
+    echo $holding->call_number . "\n";
+}
+
+$first_holding_id = $holding_result->holdings[0]->holding_id;
+$item_result = $client->listItems($first_holding_id, $mms);
+foreach ($item_result->items as $item) {
+    echo "{$item->barcode} is at {$item->temp_library_desc}\n";
 }
 ```
 
