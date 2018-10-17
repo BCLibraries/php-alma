@@ -18,30 +18,21 @@ Utilities for interacting with Alma Web Services in PHP. Currently read access i
 
 2. Create a `composer.json` file. The example below will install `php-alma`:
 
-
+	{
+	  "name": "your-org/your-project",
+	  "description": "Describe your project",
+	  "license": "MIT",
+	  "repositories": [
 		{
-            "name": "your-org/your-project",
-            "description": "Describe your project",
-            "license": "MIT",
-            "repositories": [
-                {
-                    "type": "vcs",
-                    "url": "https://github.com/BCLibraries/php-alma"
-                },
-                {
-                    "url": "https://github.com/pear/File_MARC.git",
-                    "type": "git"
-                }
-            ],
-            "require": {
-                "bclibraries/php-alma": "master",
-                "pear/File_MARC": "*"
-            },
-            "minimum-stability": "dev"
-        }
-   
-   Transitive composer installs don't work with PEAR repositories, so you'll have to specifically include the PEAR install in your `composer.json`.
-    
+		  "type": "vcs",
+		  "url": "https://github.com/BCLibraries/php-alma"
+		}
+	  ],
+	  "require": {
+		"bclibraries/php-alma": "master",
+	  }
+	}
+       
 3. Install using `composer.phar`:
 
 		php composer.phar install
@@ -51,7 +42,7 @@ Composer will load all the required dependencies and create an `vendor/autoload.
 
 ### Connecting
 
-To start:
+The SOAP services (courses and users) have an initialization step:
 
 ```php
 use BCLib\Alma\AlmaServices;
@@ -64,6 +55,8 @@ $soap_pass = '';
 
 AlmaServices::initialize($soap_user, $soap_pass, $soap_institution);
 ```
+
+Holding services use the REST client and does not require this step.
 
 ### Users 
 
