@@ -18,7 +18,7 @@ class Article extends Citation implements \JsonSerializable
     public function __get($property)
     {
         $value = parent::__get($property);
-        if (!is_null($value)) {
+        if ($value !== null) {
             return $value;
         }
 

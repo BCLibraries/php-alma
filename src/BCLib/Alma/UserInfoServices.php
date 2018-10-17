@@ -52,7 +52,7 @@ class UserInfoServices
         }
 
         $user = false;
-        $params = array('arg0' => $identifier);
+        $params = ['arg0' => $identifier];
         $base = $this->_soap_client->execute('getUserDetails', $params);
         if ($this->_soap_client->lastError() === false) {
             $children = $base->result->children('http://com/exlibris/urm/user_record/xmlbeans');

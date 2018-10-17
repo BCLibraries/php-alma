@@ -24,7 +24,7 @@ class AlmaSoapClient
 
     public function execute($function_name, array $params)
     {
-        if (is_null($this->_client)) {
+        if ($this->_client === null) {
             $this->_loadClient();
         }
 

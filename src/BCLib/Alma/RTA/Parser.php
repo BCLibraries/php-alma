@@ -11,7 +11,7 @@ class Parser
 
     public function __construct()
     {
-        $this->ava_map = array(
+        $this->ava_map = [
             'a' => 'institution',
             'b' => 'library',
             'c' => 'location',
@@ -22,7 +22,7 @@ class Parser
             'j' => 'j',
             'k' => 'multi_volume',
             'p' => 'number_loans'
-        );
+        ];
     }
 
     /**
@@ -34,7 +34,7 @@ class Parser
     {
         $rta_dom = new \DOMDocument();
         if (!$rta_dom->loadXML($rta_xml)) {
-            throw new \Exception("Invalid RTA response");
+            throw new \Exception('Invalid RTA response');
         }
         $this->xpath = new \DOMXPath($rta_dom);
         $this->xpath->registerNamespace('oai', 'http://www.openarchives.org/OAI/2.0/');

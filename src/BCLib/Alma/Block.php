@@ -39,7 +39,7 @@ class Block
                 $result = $this->_xml->xpath(('xb:owneredEntity/xb:creationDate'));
                 return (string) $result[0];
             case 'modification_date':
-                $result = $this->_xml->xpath(('xb:owneredEntity/xb:modificationDate'));
+                $result = $this->_xml->xpath('xb:owneredEntity/xb:modificationDate');
                 return (string) $result[0];
         }
     }

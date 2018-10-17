@@ -16,7 +16,7 @@ class SoapBibRecord implements \JsonSerializable
      */
     protected $_marc;
 
-    protected $_holdings = array();
+    protected $_holdings = [];
 
     /**
      * @var Holding
@@ -64,12 +64,12 @@ class SoapBibRecord implements \JsonSerializable
      *
      * @return array|\File_MARC_List
      */
-    function getMARCField($field_num)
+    public function getMARCField($field_num)
     {
         return $this->_marc->getFields($field_num);
     }
 
-    function jsonSerialize()
+    public function jsonSerialize()
     {
         $bib_record = new \stdClass();
         $bib_record->mms = $this->mms;
@@ -79,13 +79,13 @@ class SoapBibRecord implements \JsonSerializable
 
     // File_MARC_Record keeps a copy of the MARCXML as a SimpleXML object. SimpleXML
     // can't be serialized, so we have to convert the MARCXML to raw text.
-    function __sleep()
+    public function __sleep()
     {
         $this->_marc_text = gzcompress($this->_marc->toXML());
-        return array("_marc_text", "_holding_template");
+        return ['_marc_text', '_holding_template'];
     }
 
-    function __wakeup()
+    public function __wakeup()
     {
         $this->_marc_text = gzuncompress($this->_marc_text);
         $marc_file = new \File_MARCXML((string) $this->_marc_text, \File_MARCXML::SOURCE_STRING);

@@ -28,8 +28,8 @@ use Mockery\CountValidator\Exception;
  */
 class Section implements \JsonSerializable
 {
-    protected $_terms = array();
-    protected $_searchable_ids = array();
+    protected $_terms = [];
+    protected $_searchable_ids = [];
 
     const SORT_TITLE = 'title';
     const SORT_AUTHOR = 'author';
@@ -70,12 +70,12 @@ class Section implements \JsonSerializable
     {
         if ((count($this->_complete_lists) + count(
                     $this->_incomplete_lists
-                ) == 0) && isset($this->_xml->reading_lists)
+                ) === 0) && isset($this->_xml->reading_lists)
         ) {
             foreach ($this->_xml->reading_lists->reading_list as $list_xml) {
                 $list = clone $this->_list_prototype;
                 $list->load($list_xml);
-                if ($list->status == "Complete") {
+                if ($list->status === 'Complete') {
                     $this->_complete_lists[] = $list;
                 } else {
                     $this->_incomplete_lists[] = $list;
@@ -86,7 +86,7 @@ class Section implements \JsonSerializable
 
     protected function _lazyLoadStrings(array &$target, \SimpleXMLElement $xml, $element_name)
     {
-        if (count($target) == 0 && count($xml) > 0) {
+        if (count($target) === 0 && count($xml) > 0) {
             foreach ($xml->$element_name as $element_xml) {
                 $target[] = (string) $element_xml;
             }
@@ -95,20 +95,20 @@ class Section implements \JsonSerializable
 
     public function sectionReadings($only_active = true, $sort = Section::SORT_TITLE)
     {
-        if (($sort != Section::SORT_TITLE) && ($sort != Section::SORT_AUTHOR)) {
+        if (($sort !== self::SORT_TITLE) && ($sort !== self::SORT_AUTHOR)) {
             throw new \Exception("$sort is not a valid sort type");
         }
 
-        $readings = array();
+        $readings = [];
 
         $lists = $this->complete_lists;
 
         if (!$only_active) {
-            $lists = $lists + $this->incomplete_lists;
+            $lists += $this->incomplete_lists;
         }
 
         foreach ($lists as $list) {
-            $readings = $readings + $list->citations;
+            $readings += $list->citations;
         }
 
         usort(
@@ -184,9 +184,9 @@ class Section implements \JsonSerializable
     public function __sleep()
     {
         // SimpleXMLElements can't be serialized. Convert to XML text.
-        $this->_xml->addAttribute('xmlns:xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance");
+        $this->_xml->addAttribute('xmlns:xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
         $this->_xml = $this->_xml->asXML();
-        return array('_xml', '_list_prototype');
+        return ['_xml', '_list_prototype'];
     }
 
     public function __wakeup()

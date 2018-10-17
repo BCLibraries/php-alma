@@ -45,11 +45,11 @@ class BadRequestException extends \Exception
 
     protected function _loadJson()
     {
-        if (!is_null($this->_result)) {
+        if ($this->_result !== null) {
 
             $body = json_decode($this->_response->getBody());
 
-            $this->_error_list = array();
+            $this->_error_list = [];
 
             foreach ($body->errorList as $error_json) {
                 $error = new \stdClass();

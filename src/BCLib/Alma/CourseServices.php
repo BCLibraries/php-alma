@@ -44,12 +44,12 @@ class CourseServices
     {
         $key = $this->_courseCacheKey($course_number, $section_number);
 
-        if (isset($section_number) && $this->_cache->contains($key)) {
-            return array($this->_cache->read($key));
+        if ($section_number !== null && $this->_cache->contains($key)) {
+            return [$this->_cache->read($key)];
         }
 
         $query = "code=$course_number";
-        if (isset($section_number)) {
+        if ($section_number !== null) {
             $query .= " and section=$section_number";
         }
 
@@ -69,7 +69,7 @@ class CourseServices
         }
 
         if (!is_array($term)) {
-            $term = array($term);
+            $term = [$term];
         }
 
         $result = new \stdClass();
@@ -87,16 +87,16 @@ class CourseServices
 
     protected function _sendQuery($query, $from, $to)
     {
-        $params = array('arg0' => $query, 'arg1' => $from, 'arg2' => $to);
+        $params = ['arg0' => $query, 'arg1' => $from, 'arg2' => $to];
         $base = $this->_soap_client->execute('searchCourseInformation', $params);
         if ($this->_soap_client->lastError() === false) {
-            $sections = array();
+            $sections = [];
             foreach ($base->results->course as $section_xml) {
                 $section = clone $this->_section_prototype;
                 $section->load($section_xml);
                 $sections[] = $section;
                 $cache_section = clone $section;
-                $this->_cache->save($section->code . ":" . $section->section, $cache_section, $this->_cache_ttl);
+                $this->_cache->save($section->code . ':' . $section->section, $cache_section, $this->_cache_ttl);
             }
         } else {
             return false;

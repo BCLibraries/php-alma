@@ -7,5 +7,5 @@ class Holding
     /**
      * @var Item[]
      */
-    public $items = array();
+    public $items = [];
 }

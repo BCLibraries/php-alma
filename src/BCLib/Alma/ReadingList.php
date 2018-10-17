@@ -19,7 +19,7 @@ class ReadingList implements \JsonSerializable
     /**
      * @var Citation[]
      */
-    protected $_citations = array();
+    protected $_citations = [];
 
     /**
      * @var CitationFactory

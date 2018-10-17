@@ -44,11 +44,11 @@ class Client
     public function buildUrl($ids)
     {
         $query = http_build_query(
-            array(
-                'doc_num' => join(',', $ids),
+            [
+                'doc_num' => implode(',', $ids),
                 'library' => $this->library
-            )
+            ]
         );
-        return "http://" . $this->alma_host . "/view/publish_avail?$query";
+        return 'http://' . $this->alma_host . "/view/publish_avail?$query";
     }
 }

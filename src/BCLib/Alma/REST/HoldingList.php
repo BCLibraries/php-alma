@@ -12,7 +12,7 @@ class HoldingList implements Loadable
     /**
      * @var \BClib\Alma\REST\Holding[]
      */
-    public $holdings = array();
+    public $holdings = [];
 
     public $total_record_count;
 

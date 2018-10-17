@@ -7,7 +7,7 @@ class ItemsList implements Loadable
     /**
      * @var \BCLib\Alma\Rest\Item[]
      */
-    public $items = array();
+    public $items = [];
     public $total_record_count;
 
     public function loadJson($item_list_json)

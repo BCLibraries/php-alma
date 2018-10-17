@@ -33,14 +33,15 @@ class HoldingsService
      * @param array $mms_ids
      *
      * @return SoapBibRecord[]
+     * @throws \File_MARC_Exception
      */
     public function getHoldings(array $mms_ids)
     {
-        $records = array();
-        $mms_to_send = array();
+        $records = [];
+        $mms_to_send = [];
 
-        for ($i = 0; $i < count($mms_ids); $i++) {
-            $key = $this->_cache->key('BCLib\Alma\SoapBibRecord', $mms_ids[$i]);
+        for ($i = 0, $max = count($mms_ids); $i < $max; $i++) {
+            $key = $this->_cache->key(SoapBibRecord::class, $mms_ids[$i]);
             if ($this->_cache->contains($key)) {
                 $records[] = $this->_cache->read($key);
             } else {
@@ -48,9 +49,7 @@ class HoldingsService
             }
         }
 
-        $params = array(
-            'arg0' => \implode(',', $mms_to_send)
-        );
+        $params = ['arg0' => \implode(',', $mms_to_send)];
 
         $results = $this->_soap->execute('retrieveHoldingsInformation', $params);
 

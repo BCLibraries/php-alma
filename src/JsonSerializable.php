@@ -17,5 +17,5 @@ if (interface_exists('JsonSerializable', false)) {
  */
 interface JsonSerializable
 {
-    function jsonSerialize();
+    public function jsonSerialize();
 }

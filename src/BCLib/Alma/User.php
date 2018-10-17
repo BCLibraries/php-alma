@@ -46,7 +46,7 @@ class User
     }
 
 
-    public function load(\SimpleXMLElement $xml, array $group_names = array())
+    public function load(\SimpleXMLElement $xml, array $group_names = [])
     {
         $this->_xml = $xml;
         $this->_group_names = $group_names;
@@ -94,9 +94,9 @@ class User
     {
         if (isset ($this->_group_names[$this->group_code])) {
             return $this->_group_names[$this->group_code];
-        } else {
-            return false;
         }
+
+        return false;
     }
 
     /**
@@ -105,7 +105,7 @@ class User
     protected function _identifiers()
     {
         if (!is_array($this->_identifiers)) {
-            $this->_identifiers = array();
+            $this->_identifiers = [];
             foreach ($this->_xml->xpath('//xb:userIdentifier') as $identifier_xml) {
                 $id = clone $this->_id_prototype;
                 $id->load($identifier_xml);
@@ -121,7 +121,7 @@ class User
     protected function _blocks()
     {
         if (!is_array($this->_blocks)) {
-            $this->_blocks = array();
+            $this->_blocks = [];
             $blocks_xml = $this->_xml->xpath('//xb:userBlock');
             foreach ($blocks_xml as $block_xml) {
                 $block = clone $this->_block_prototype;
@@ -140,11 +140,11 @@ class User
     public function __sleep()
     {
         // SimpleXMLElements can't be serialized. Convert to XML text.
-        $this->_xml->addAttribute('xmlns:xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance");
-        $this->_xml->addAttribute('xmlns:xmlns:xb', "http://com/exlibris/urm/user_record/xmlbeans");
-        $this->_xml->addAttribute('xmlns:xmlns', "http://com/exlibris/urm/general/xmlbeans");
+        $this->_xml->addAttribute('xmlns:xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
+        $this->_xml->addAttribute('xmlns:xmlns:xb', 'http://com/exlibris/urm/user_record/xmlbeans');
+        $this->_xml->addAttribute('xmlns:xmlns', 'http://com/exlibris/urm/general/xmlbeans');
         $this->_xml = $this->_xml->asXML();
-        return array('_xml', '_id_prototype', '_block_prototype');
+        return ['_xml', '_id_prototype', '_block_prototype'];
     }
 
     public function __wakeup()

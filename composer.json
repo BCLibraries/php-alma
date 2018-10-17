@@ -1,36 +1,43 @@
 {
-    "name": "bclibraries/php-alma",
-    "description": "Access to Alma Web services in PHP.",
-    "keywords": ["Alma", "library"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Ben Florin",
-            "email": "benjamin.florin@bc.edu"
-        }
-    ],
-    "repositories": [
-        {
-            "url": "https://github.com/pear/File_MARC.git",
-            "type": "git"
-        }
-    ],
-    "require": {
-        "php": ">=5.6.0",
-        "phpunit/phpunit": "3.7.19",
-        "mockery/mockery": "dev-master@dev",
-        "doctrine/cache": "1.*",
-        "pear/file_marc": "1.*",
-        "pear/pear_exception" : "@dev",
-        "guzzlehttp/guzzle": "^3.8.1"
-    },
-    "prefer-stable": true,
-    "minimum-stability": "stable",
-    "suggest": {},
-    "autoload": {
-        "psr-0": {
-            "BCLib": "src/",
-            "JsonSerializable": "src/"
-        }
+  "name": "bclibraries/php-alma",
+  "description": "Access to Alma Web services in PHP.",
+  "keywords": [
+    "Alma",
+    "library"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ben Florin",
+      "email": "benjamin.florin@bc.edu"
     }
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/pear/File_MARC.git",
+      "type": "git"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "phpunit/phpunit": "3.7.19",
+    "mockery/mockery": "dev-master@dev",
+    "doctrine/cache": "1.*",
+    "pear/file_marc": "1.*",
+    "pear/pear_exception": "@dev",
+    "guzzlehttp/guzzle": "^3.8.1",
+    "ext-soap": "*",
+    "ext-simplexml": "*",
+    "ext-zlib": "*",
+    "ext-json": "*"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "stable",
+  "suggest": {},
+  "autoload": {
+    "psr-0": {
+      "BCLib": "src/",
+      "JsonSerializable": "src/"
+    }
+  }
 }
