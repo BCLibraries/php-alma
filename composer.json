@@ -16,17 +16,16 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.6.0",
         "phpunit/phpunit": "3.7.19",
         "mockery/mockery": "dev-master@dev",
         "doctrine/cache": "1.*",
-        "pear/file_marc": "dev-master",
+        "pear/file_marc": "1.*",
         "pear/pear_exception" : "@dev",
         "guzzlehttp/guzzle": "^3.8.1"
     },
     "prefer-stable": true,
     "minimum-stability": "stable",
-    "require-dev": {},
     "suggest": {},
     "autoload": {
         "psr-0": {

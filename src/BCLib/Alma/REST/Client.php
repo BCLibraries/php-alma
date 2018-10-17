@@ -33,15 +33,15 @@ class Client
         try {
             $response = $this->_client->get(
                 "$url.json?$query_string",
-                array(
-                    'headers' => array(
+                [
+                    'headers' => [
                         'Accept' => 'application/json'
-                    )
-                )
+                    ]
+                ]
             )->send()->getBody(true);
         } catch (BadResponseException $e) {
             throw new BadRequestException($e->getResponse());
-        };
+        }
 
         return json_decode($response);
     }

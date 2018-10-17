@@ -30,26 +30,26 @@ class Item implements Loadable
     {
         $this->bib_data = new Bib();
         $this->bib_data->loadJSON($item_json->bib_data);
-        $this->link = $item_json->link;
+        $this->link = isset($item_json->link) ? $item_json->link : null;
 
-        $item_data = $item_json->item_data;
+        $item_data = isset($item_json->item_data) ? $item_json->item_data : null;
 
-        $this->pid = $item_data->pid;
-        $this->description = $item_data->description;
-        $this->barcode = $item_data->barcode;
-        $this->library_desc = $item_data->library->desc;
-        $this->library_value = $item_data->library->value;
-        $this->location_desc = $item_data->location->desc;
-        $this->location_value = $item_data->location->value;
-        $this->enumeration = $item_data->enumeration_a;
+        $this->pid = isset($item_data->pid) ? $item_data->pid : null;
+        $this->description = isset($item_data->description) ? $item_data->description : null;
+        $this->barcode = isset($item_data->barcode) ? $item_data->barcode : null;
+        $this->library_desc = isset($item_data->library->desc) ? $item_data->library->desc : null;
+        $this->library_value = isset($item_data->library->value) ? $item_data->library->value : null;
+        $this->location_desc = isset($item_data->location->desc) ? $item_data->location->desc : null;
+        $this->location_value = isset($item_data->location->value) ? $item_data->location->value : null;
+        $this->enumeration = isset($item_data->enumeration_a) ? $item_data->enumeration_a : null;
 
-        $holding_data = $item_json->holding_data;
+        $holding_data = isset($item_json->holding_data) ? $item_json->holding_data : null;
 
-        $this->holding_id = $holding_data->holding_id;
-        $this->holding_link = $holding_data->link;
-        $this->temp_library_desc = $holding_data->temp_library->desc;
-        $this->temp_library_value = $holding_data->temp_library->value;
-        $this->temp_location_desc = $holding_data->temp_library->desc;
-        $this->temp_location_value = $holding_data->temp_library->value;
+        $this->holding_id = isset($holding_data->holding_id) ? $holding_data->holding_id : null;
+        $this->holding_link = isset($holding_data->link) ? $holding_data->link : null;
+        $this->temp_library_desc = isset($holding_data->temp_library->desc) ? $holding_data->temp_library->desc : null;
+        $this->temp_library_value = isset($holding_data->temp_library->value) ? $holding_data->temp_library->value : null;
+        $this->temp_location_desc = isset($holding_data->temp_library->desc) ? $holding_data->temp_library->desc : null;
+        $this->temp_location_value = isset($holding_data->temp_library->value) ? $holding_data->temp_library->value : null;
     }
 }

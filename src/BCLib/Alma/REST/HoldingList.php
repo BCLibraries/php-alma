@@ -19,13 +19,16 @@ class HoldingList implements Loadable
     public function loadJson($json)
     {
         $this->total_record_count = $json->total_record_count;
-        foreach ($json->holding as $holding_json)
-        {
-            $holding = new Holding();
-            $holding->loadJson($holding_json);
-            $this->holdings[] = $holding;
+        if (isset ($json->holding)) {
+            foreach ($json->holding as $holding_json) {
+                $holding = new Holding();
+                $holding->loadJson($holding_json);
+                $this->holdings[] = $holding;
+            }
         }
-        $this->bib_data = new Bib();
-        $this->bib_data->loadJSON($json->bib_data);
+        if (isset($json->bib_data)) {
+            $this->bib_data = new Bib();
+            $this->bib_data->loadJSON($json->bib_data);
+        }
     }
 }
